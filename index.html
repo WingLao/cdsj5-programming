@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head><meta name="site-mode" content="static">
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+<meta name="googlebot" content="noindex,nofollow,noarchive,nosnippet">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#3c536b">
+<title>比賽與升學 · CDSJ5</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231f2f43'/%3E%3Cpath d='M32 32C22 20 9 22 9 32s13 12 23 0s23-10 23 0s-13 12-23 0' fill='none' stroke='%23f0d59a' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="./styles_202610080255.css">
+<script src="./p5.min_202610071530.js" defer></script>
+<script src="./marked.umd_202610071530.js" defer></script>
+<script src="./purify.min_202610071530.js" defer></script>
+<script src="./background_202610080255.js" defer></script>
+<script src="./logo_202610080255.js" defer></script>
+<script src="./app_202610080255.js" defer></script>
+</head>
+<body>
+<div id="background" aria-hidden="true"></div>
+<div class="shell">
+<header class="masthead">
+<a href="#overview" class="brand">
+<span id="class-logo" class="class-logo" role="img" aria-label="程式語言班：程式碼無限符號LOGO"><svg class="logo-fallback" viewBox="0 0 132 68" aria-hidden="true"><defs><linearGradient id="logo-gold" x1="0" x2="1"><stop offset="0" stop-color="#8fa9b6"/><stop offset=".5" stop-color="#ffd884"/><stop offset="1" stop-color="#8fa9b6"/></linearGradient></defs><path d="M66 34C42 8 12 12 12 34s30 26 54 0s54-22 54 0s-30 26-54 0" fill="none" stroke="#5a4526" stroke-width="5" stroke-linecap="round" transform="translate(1.5 2)"/><path d="M66 34C42 8 12 12 12 34s30 26 54 0s54-22 54 0s-30 26-54 0" fill="none" stroke="url(#logo-gold)" stroke-width="4" stroke-linecap="round" stroke-dasharray="3 2.4"/></svg></span>
+<span class="brand-text">比賽與升學<small>CDSJ5 · 程式語言班</small></span>
+</a>
+</header>
+<nav aria-label="主導覽">
+<button data-view="overview" class="nav active">比賽</button>
+<button data-view="attendance" class="nav">出席位置</button>
+<button data-view="results" class="nav">榮譽榜</button>
+<button data-view="rules" class="nav">資料</button>
+<button data-view="admissions" class="nav">升學加分</button>
+</nav>
+<main>
+<div class="page-heading">
+<p id="page-kicker">2026–2027 學年</p>
+<h1 id="page-title">比賽資訊</h1>
+<p id="page-description">先看重要日期，按需要展開詳情。</p>
+</div>
+<div id="status-banner" role="status" hidden></div>
+<div id="content"><p class="empty">正在讀取資料…</p></div>
+</main>
+<footer><span id="sync-time">正在同步</span><button id="refresh" class="text-button">重新整理</button></footer>
+</div>
+<button id="to-top" type="button" aria-label="回到頂部" hidden>↑ 頂部</button>
+<div id="toast" role="status" hidden></div>
+</body>
+</html>

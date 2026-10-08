@@ -1,0 +1,1320 @@
+<!doctype html>
+<html lang="zh-Hant" data-theme="dark">
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+<meta name="googlebot" content="noindex,nofollow,noarchive,nosnippet">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>升學加分問答指南</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600;800&family=Noto+Sans+TC:wght@400;500;700&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Layout: reference handbook. Question cards up top, one reading column, wide tables scroll in place, citations as small ledger tags. */
+:root{
+  --bg:#f6f7f5; --surface:#ffffff; --fg:#1b2422; --muted:#5b6865; --line:#d9dfdc;
+  --accent:#0f5c57; --accent-soft:#e2efed; --warn:#9a5b00; --warn-soft:#fbefd9; --ok:#2f6b2a; --ok-soft:#e5f1e2;
+  --display:"Noto Serif TC","Songti TC",serif; --body:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif; --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#121816; --surface:#1a2220; --fg:#e4ebe8; --muted:#9aa8a4; --line:#2e3a37;
+  --accent:#6cc5bb; --accent-soft:#1d3532; --warn:#f0b65a; --warn-soft:#3a2c14; --ok:#8fd38a; --ok-soft:#1e3320; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#121816; --surface:#1a2220; --fg:#e4ebe8; --muted:#9aa8a4; --line:#2e3a37;
+  --accent:#6cc5bb; --accent-soft:#1d3532; --warn:#f0b65a; --warn-soft:#3a2c14; --ok:#8fd38a; --ok-soft:#1e3320; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:15.5px;line-height:1.7;margin:0}
+.wrap{max-width:1040px;margin:0 auto;padding-inline:20px;padding-block:28px 64px}
+header.hero{display:grid;gap:14px;padding-block:12px 26px;border-bottom:1px solid var(--line)}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+h1{font-family:var(--display);font-weight:800;font-size:clamp(28px,5vw,44px);line-height:1.2;margin:0;text-wrap:balance}
+.lede{color:var(--muted);max-width:62ch;margin:0}
+.legend{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-size:12.5px;padding:3px 10px;border-radius:999px;border:1px solid var(--line);background:var(--surface)}
+.chip b{color:var(--accent)}
+.qgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin-block:26px 8px}
+.qgroup{grid-column:1/-1;font-family:var(--mono);font-size:12px;letter-spacing:.08em;color:var(--muted);margin-top:6px}
+.q{display:grid;gap:4px;padding:14px 16px;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:inherit;text-decoration:none;transition:border-color .15s,transform .15s}
+.q:hover,.q:focus-visible{border-color:var(--accent);transform:translateY(-1px);outline:none}
+.q span{font-weight:700}
+.q small{color:var(--muted);font-size:13px;line-height:1.5}
+#doc{min-width:0}
+#doc h1{display:none}
+#doc h1+blockquote{display:none}
+#doc h2{font-family:var(--display);font-size:clamp(21px,3vw,26px);line-height:1.35;margin:52px 0 12px;padding-top:14px;border-top:2px solid var(--fg);text-wrap:balance;scroll-margin-top:16px}
+#doc h3{font-size:17px;margin:30px 0 8px;color:var(--accent)}
+#doc p,#doc li{max-width:72ch}
+#doc blockquote{margin:16px 0;padding:10px 16px;background:var(--accent-soft);border-radius:8px}
+#doc hr{border:0;border-top:1px solid var(--line);margin:28px 0}
+.part{font-family:var(--mono)!important;font-size:13px!important;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);border:0!important;margin:64px 0 0!important;padding:0!important}
+.tbl{overflow-x:auto;margin:12px 0 18px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:14px;line-height:1.55}
+th,td{padding:9px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);min-width:6em}
+th{font-size:12.5px;color:var(--muted);font-weight:700;background:var(--bg);white-space:nowrap}
+tr:last-child td{border-bottom:0}
+td.na{background:var(--warn-soft)}
+td.yes{background:var(--ok-soft)}
+strong{font-weight:700}
+a{color:var(--accent)}
+a.cite{font-family:var(--mono);font-size:11.5px;text-decoration:none;padding:1px 5px;border-radius:4px;background:var(--accent-soft);white-space:nowrap}
+a.cite::before{content:"["}a.cite::after{content:"]"}
+a.cite:hover{text-decoration:underline}
+.mmd{overflow-x:auto;margin:14px 0 20px;padding:16px;border:1px dashed var(--line);border-radius:10px;background:var(--surface);text-align:center}
+.mmd svg{max-width:100%;height:auto}
+.mmd.src{white-space:pre;text-align:left;font-family:var(--mono);font-size:12px;color:var(--muted)}
+code{font-family:var(--mono);font-size:.9em}
+.top{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));padding:8px 12px;border-radius:999px;background:var(--fg);color:var(--bg);text-decoration:none;font-size:13px}
+footer{margin-top:48px;color:var(--muted);font-size:13px}
+@media (prefers-reduced-motion:reduce){.q{transition:none}}
+
+:root{--bg:transparent;--fg:#202020;--muted:#686466;--line:#ded7da;--accent:#cf0755;--accent-soft:#ffe5ee;--display:"PingFang TC",sans-serif}.wrap{padding:0 0 36px;max-width:none}.q,.tbl,#doc blockquote{border-radius:3px}.q:hover{box-shadow:3px 3px 0 #ed225d}.hero h1{font-size:30px}.top{display:none} .qgrid{grid-template-columns:repeat(auto-fit,minmax(min(230px,100%),1fr))}#doc{overflow-wrap:anywhere}
+/* Match the integrated site's soft slate-blue palette. */
+:root[data-theme="dark"]{--bg:transparent;--surface:#1f2f43;--fg:#f2f6fa;--muted:#d3dde6;--line:#ffffff24;--accent:#afcdd4;--accent-soft:#31455c;--warn:#f0d59a;--warn-soft:#4f3d22;--ok:#a9d8c0;--ok-soft:#24443f}.q,.tbl,#doc blockquote{border-radius:12px}.q:hover{box-shadow:none}th{background:#ffffff0a}a.cite{padding:3px 6px}
+.standalone body{background:#40576f}
+.standalone .wrap{max-width:1040px;padding:24px 20px 64px}
+.standalone #doc h2{scroll-margin-top:16px}
+/* 外層頁面有固定導覽列，錨點要留位。 */
+#doc h2{scroll-margin-top:76px}
+/* 寬圖表保持可讀大小，在框內左右滑動，不硬縮到看不見。 */
+.mmd.wide{text-align:left;padding-top:0}
+.mmd.wide::before{content:"← 左右滑動看全圖 →";display:block;position:sticky;left:0;padding:8px 0;font-size:12px;color:var(--muted);text-align:center}
+/* 手機：表格每一列改成一張卡片——第一欄作卡片標題，其餘欄「欄名｜內容」左右並排，不必橫向滑動。 */
+@media (max-width:640px){
+  body{font-size:16px;line-height:1.8}
+  .hero{padding-block:4px 20px;gap:12px}
+  .hero h1{font-size:26px}
+  .lede{font-size:15px;line-height:1.75}
+  .legend{gap:6px}
+  .chip{font-size:12px;padding:3px 9px}
+  .qgrid{gap:8px;margin-block:20px 4px}
+  .qgroup{margin-top:10px}
+  .q{padding:12px 14px;gap:2px}
+  .q span{font-size:15.5px;line-height:1.5}
+  .q small{font-size:12.5px}
+  #doc p,#doc li{max-width:none}
+  #doc p{margin:12px 0}
+  #doc li{margin:8px 0}
+  #doc ul,#doc ol{padding-left:22px}
+  #doc h3{margin:28px 0 12px;padding-left:10px;border-left:3px solid var(--accent);font-size:16.5px;line-height:1.5;color:var(--fg)}
+  #doc blockquote{padding:12px 14px}
+  #doc blockquote p{margin:6px 0}
+  .tbl{border:0;background:transparent;overflow:visible;margin:12px 0 20px}
+  table,tbody,tr{display:block;width:100%}
+  thead{display:none}
+  tr{margin:0 0 12px;border:1px solid var(--line);border-radius:12px;background:var(--surface);overflow:hidden}
+  td{display:grid;grid-template-columns:5.2em minmax(0,1fr);gap:0 12px;align-items:start;min-width:0;padding:10px 14px;border-bottom:1px solid var(--line);font-size:15px;line-height:1.7;overflow-wrap:anywhere}
+  td:not([data-label]){display:block}
+  td[data-label]::before{content:attr(data-label);font-size:12.5px;font-weight:600;line-height:2.05;color:var(--muted)}
+  td:first-child{background:#ffffff0f;font-size:15.5px;font-weight:700;line-height:1.6}
+  td:first-child[data-label]::before{line-height:1.95}
+  td:last-child,tr:last-child td:last-child{border-bottom:0}
+  tr:last-child td{border-bottom:1px solid var(--line)}
+  td.blank{display:none}
+  td .v{min-width:0}
+  a.cite{display:inline-block;margin:1px 2px 1px 0;line-height:1.5}
+  .mmd{padding:12px}
+}
+.sec-close{display:none}
+/* 手機：每一節收合，點問題卡片或標題才展開，避免整頁過長。 */
+#doc.acc hr{display:none}
+#doc.acc .part{margin:36px 0 10px!important}
+#doc.acc details.sec{border-top:1px solid var(--line)}
+#doc.acc details.sec:last-of-type{border-bottom:1px solid var(--line)}
+#doc.acc details.sec>summary{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:56px;padding:12px 0;cursor:pointer;list-style:none;overflow:hidden;-webkit-tap-highlight-color:transparent}
+#doc.acc details.sec>summary::-webkit-details-marker{display:none}
+#doc.acc details.sec>summary::after{content:"›";flex:none;display:grid;place-items:center;width:24px;height:24px;font-size:22px;line-height:1;color:var(--muted);transition:transform .2s}
+#doc.acc details.sec[open]>summary::after{transform:rotate(90deg)}
+#doc.acc details.sec>summary h2{margin:0;padding:0;border:0;font-size:18px}
+#doc.acc details.sec[open]{padding-bottom:6px}
+#doc.acc .sec-close{display:block;width:100%;min-height:46px;margin:18px 0 12px;border:1px solid var(--line);border-radius:10px;background:transparent;color:var(--accent);font:inherit;font-size:14px;cursor:pointer}
+#doc.acc details.sec[open]>summary h2{color:var(--accent)}
+@media (prefers-reduced-motion:reduce){#doc.acc details.sec>summary::after{transition:none}}
+</style>
+
+<script>/* 單獨開啟（不是嵌在網站內）時補上底色及邊距 */if(parent===window)document.documentElement.classList.add("standalone");</script>
+<div class="wrap">
+<header class="hero">
+  <div class="eyebrow">澳門中學升學輔導 · 核實日 2026-10-07</div>
+  <h1>升學加分問答指南</h1>
+  <p class="lede">澳門四校、香港各大學、內地名校：哪些比賽、代表資格和證書，在招生條文中真的有加分、免考、推薦或獎學金。每句結論都附官方來源。</p>
+  <div class="legend">
+    <span class="chip"><b>①</b> 明列分值</span><span class="chip"><b>②</b> 可評核加分</span><span class="chip"><b>③</b> 免考／優先／放寬</span><span class="chip"><b>④</b> 獎學金</span><span class="chip">未公布＝不說有加分</span>
+  </div>
+</header>
+
+<nav class="qgrid" aria-label="常見問題">
+  <div class="qgroup">學生常問</div>
+  <a class="q" href="#q1"><span>四校聯考有哪些加分？</span><small>澳大、理大、科大、旅大分值與免考</small></a>
+  <a class="q" href="#q2"><span>澳大加分與推薦</span><small>科普 11 項、人文 9 項、校長推薦</small></a>
+  <a class="q" href="#q3"><span>香港各大學</span><small>城大申請與獎學金、理大 STARS、科大奧賽獎學金、哪些不能套用</small></a>
+  <a class="q" href="#q4"><span>內地名校</span><small>清華、北大、浙大、交大、復旦保送簡章</small></a>
+  <a class="q" href="#qsport"><span>體育成績可以保送澳大嗎？</span><small>澳大傑出運動員入學、校長推薦信、四校體育加分、香港各大學</small></a>
+  <div class="qgroup">教師想知道</div>
+  <a class="q" href="#q5"><span>什麼單位辦的比賽有用？</span><small>主辦單位與被點名比賽的關係圖</small></a>
+  <a class="q" href="#q6"><span>奧林匹克與澳門代表</span><small>體育代表與學科奧賽代表的分別</small></a>
+  <a class="q" href="#q7"><span>政府機關辦的比賽</span><small>教青局、文化局、內地教育部等</small></a>
+  <a class="q" href="#q8"><span>哪些證書有用？</span><small>音樂、舞蹈、語言、全人、IT</small></a>
+  <a class="q" href="#q9"><span>電腦學會、CPTTM</span><small>本地機構比賽的實際作用</small></a>
+  <a class="q" href="#q10"><span>教育部白名單有沒有用？</span><small>47 項全國性競賽與升學的真實關係</small></a>
+  <div class="qgroup">實際操作</div>
+  <a class="q" href="#qpast"><span>本校過去的比賽有沒有用？</span><small>逐項對照澳大、內地、香港的保送與推薦免試</small></a>
+  <a class="q" href="#ops"><span>核對清單與日期</span><small>2026-10 至 2027-03 關鍵日期</small></a>
+  <a class="q" href="#appendix"><span>附錄：條文細表</span><small>音樂、全人發展、醫學英文免考、理大專才、證書界線</small></a>
+</nav>
+
+<main id="doc"><p>載入中…</p></main>
+<footer>資料以各大學及主辦單位官方條文為準；條文更新時請按來源連結重新核對。</footer>
+</div>
+<a class="top" href="#">回到頂部</a>
+
+<script type="text/markdown" id="md">
+# 升學加分問答指南：澳門四校・香港・內地名校
+
+> **對象：** 澳門高中學生、班主任、升學輔導及競賽負責老師
+> **版本：** 202610080254（更新於 2026-10-08 02:54，Europe/Rome）
+> **本版核實日：** 2026-10-07（第三次核對；前兩次為 2026-10-06 原表及 2026-10-07 合併版）
+> **本版新增：** 第 6 節「體育成績可以保送澳大嗎？校長推薦信有用嗎？四校有沒有體育加分？」（2026-10-07 核對澳大、理大、科大、旅大原文），並加入 6.5「體育成績能否保送香港各大學」；第 4 節補回香港城市大學（4.1）；新增第 13 節「本校過去的比賽，對保送和推薦免試有沒有用？」逐項對照表；第 15 節附錄併入舊版《升學加分總表（合併版）》的條文細表；第 12 節「教育部白名單有沒有用？」（2026-10-07 核對教育部原文及附件）
+> **原則：** 每一句結論都附官方來源代號，完整清單見 [第 16 節](#refs)。官方沒寫的，一律寫「未公布」，不推測分數。
+
+---
+
+## 0. 本次「再三確認」結果
+
+本次重新打開官方原文逐項比對。核心條文**全部與合併版一致**，只有以下更正及補充。
+
+| # | 項目 | 合併版寫法 | 本次核對官方原文 | 來源 |
+| --- | --- | --- | --- | --- |
+| 1 | 澳大筆試日期 | 2027-03-18 至 21「中、英、數」 | **葡文 3/18–19；中文、物理 3/20；英文、數學 3/21** | [UME] |
+| 2 | 澳大校長推薦 | 「全級首 10%」 | 2027/2028 規條（2026-08-26）：**高二**成績全級首 10%；未達者如有學術／非學術特長，校長亦可推薦；葡語專才計劃門檻為首 30% | [UMPRA] |
+| 3 | 清華澳門保送 | 「奧賽突出可放寬」 | 原文另寫：**通常要求高中三年綜合成績年級前三名**；藝術類前 10% | [THU] |
+| 4 | 北大澳門保送 | 「可突破學業排名」 | 原文：**全校前三名**；綜合素質突出者可突破；2026 年擬招 20 人 | [PKU] |
+| 5 | 復旦澳門保送 | 「筆試排名入圍面試」 | 原文：筆試由**教青局統一組織**＋專家面試；不超過 30 名 | [FDU] |
+| 6 | 香港科大奧賽獎學金 | — | 原文：**毋須申請**，由學院／課程辦公室提名 | [USTO] |
+| 7 | 澳門電腦學會 MOI 頁 | 已引用 | 本次伺服器拒絕連線（HTTP 403），**沿用 2026-10-06 核實結果** | [MOI] |
+| 8 | 澳大傑出運動員入學 | 只寫資格 | 章程原文：甄選通過者**無需再參加四校聯考**；總名額 **70 名**；須面試及運動專項測試；必須加入澳大校隊 | [UMSPORT] |
+| 9 | 澳大校長推薦日期 | 未列 | 報名 **2026-09-23 至 10-09**；面試 2026-11-14 至 15；結果 12 月中旬 | [UMPRA] |
+| 10 | 理大校長推薦 | 未列 | 2027/2028 報名 2026-09-23 至 10-07；頁面沒有提及體育 | [MPUPRA] |
+| 12 | 香港城市大學（澳門學生） | 只有運動員一行 | 國際招生頁「Macao, China」接受高中畢業文憑；IELTS 6.5／TOEFL 79；主要批次 2027-01-15 截止；頁面沒有比賽加分條文 | [CITYINT] |
+| 13 | 香港各校運動員入學 | 只列城大、港大 | 逐校核對：城大 OAES、理大 STARS、科大 BAAS 開放予非本地；科大 SAAS、理大 OSRS、浸大 TADAS、SALSA 均限本地或須有資格代表香港 | [CITYS] [USTBAAS] [USTSAAS] [POLYOSRS] [BUTADAS] |
+| 11 | 科大體育 | 未列 | 加分計劃只有滙業盃，**沒有體育加分**；體育成績走「特長生」，仍須達文化成績 | [MUST] [MUSTT] |
+
+**本次逐字核對過的條文：** 澳大加分計劃全部類別、澳大免考、澳大校長推薦、理大加分及免考、理大專才、科大附件 1（PDF 原文）、科大校長推薦、旅大加分及免考、CPTTM 比賽目錄、香港理大 STARS、香港科大奧賽獎學金、中大經濟學（本地及非本地頁）、清華／北大／浙大／上海交大／復旦 2026 澳門保送生簡章。體育專題另核對：澳大加分計劃體育類別、澳大傑出運動員入學計劃章程、理大體育精英加分、理大專才入學、理大校長推薦、科大特長生簡章、旅大本地生招生頁。
+
+**仍然查不到（官方未公布）：**
+
+- 理大、旅大 2027/2028 加分計劃（頁面仍是上一屆日期）。[MPU] [UTM]
+- 澳大每個獎項實際加幾分（只公布 20–50 範圍）。[UM]
+- 科大冠／亞／季軍各加幾分（只公布 30–50 範圍）。[MUST]
+- 任何 CPTTM 比賽的升學加分條文（目錄頁沒有提及升學或加分）。[CLIST]
+- 澳大校長推薦中「體育特長」要達到甚麼水平、每校可推薦人數。[UMPRA]
+- 城大各課程對澳門學歷的收生分數；城大 OAES、理大 STARS、科大 BAAS 要求的運動成績級別。[CITYINT] [CITYS] [STARS] [USTBAAS]
+- 港大頂尖運動員直接入學、浸大 SETDAS 是否適用於澳門學生；嶺大精英運動員獎學金（本次未能開啟原頁）。[HKUS] [BUDAS] [LNEA]
+- 旅大「比賽獲頒獎項」是否包括體育比賽；科大推薦入學的資格（招生日程頁只列日期）。[UTM] [MUSTPRA]
+
+---
+
+## 1. 一張圖看懂：獎項怎樣變成升學優勢
+
+```mermaid
+flowchart TD
+    A["學生的獎項／證書／代表資格"] --> B{"大學招生條文<br/>有沒有點名？"}
+    B -- "有，並寫分數" --> C["① 筆試加分<br/>澳大 +20–50<br/>理大 +10–50<br/>科大 +30–50"]
+    B -- "有，但沒分數" --> D["② 可評核加分<br/>香港理大 STARS 等"]
+    B -- "沒點名" --> E{"有開放類別<br/>可申請評核？"}
+    E -- "有" --> F["交獎狀＋章程＋官方得獎名單<br/>由大學審核，不保證"]
+    E -- "沒有" --> G["未公布<br/>不能對學生說有加分"]
+    A --> H["③ 非分數優惠<br/>免考、免筆試、優先錄取、放寬推薦門檻"]
+    A --> I["④ 獎學金<br/>是錢，不是入學分數"]
+```
+
+| 類型 | 意思 | 對學生的說法 |
+| --- | --- | --- |
+| **① 明列分值** | 官方公布加幾分或範圍 | 「符合條件可申請加分，仍須審批」 |
+| **② 可評核加分** | 官方說可能加分，沒有固定分值 | 「可以申請，由大學決定」 |
+| **③ 非分數優惠** | 免考、免筆試、優先、放寬推薦門檻 | 「有幫助，但不是加分」 |
+| **④ 獎學金** | 錄取後或隨錄取評定的資助 | 「是錢，不是分數」 |
+| **未公布** | 查不到正式承諾 | 不說一定加分，也不說一定沒用 |
+
+**三條底線**
+
+- 四校聯考只是共同考試，**各校獨立審批加分**，沒有四校共用加分清單。[JAE]
+- 只有澳大已公布 2027/2028；理大、旅大仍是上一屆條文，不能當新一屆承諾。[UM] [MPU] [UTM]
+- 香港 JUPAS、Non-JUPAS、非本地、內地高考各有資格，**不能互相套用**。
+
+---
+
+# 第一部分：學生常問
+
+## 2. 「四校聯考有哪些加分項目？」<a id="q1"></a>
+<!-- card: 四校聯考有哪些加分？ | 澳大、理大、科大、旅大分值與免考 -->
+
+### 2.1 四校總覽
+
+| 大學 | 加分 | 上限 | 申請期 | 條文年度 | 來源 |
+| --- | --- | --- | --- | --- | --- |
+| **澳門大學** | 所需考試科目 **+20–50** | 單一類別 60；不同類別可累積；最多 10 項 | **2027-01-18 至 29** | 2027/2028 | [UM] |
+| **澳門理工大學** | 演辯 **+20**；體育 **+10–50**；全人 **+10–30**；夏令營專設試 **+10** | 每考試項目 60；最多 10 項 | 上一屆 2025-12-01 至 2026-01-16 | 上一屆 | [MPU] [MPUF] |
+| **澳門科技大學** | 只有滙業盃：語言科及數學科**各 +30–50** | — | 報名期內交註冊處 | 附件日期 2026-06-17 | [MUST] |
+| **澳門旅遊大學** | **沒有分值**，原文是「有機會獲得優先錄取」 | — | 上一屆 2026-01-02 至 16 | 上一屆 | [UTM] |
+
+### 2.2 同一個比賽，四校待遇不同
+
+```mermaid
+flowchart LR
+    H["滙業盃<br/>中學生常識問答比賽"]
+    H --> UM["澳大 +20–50<br/>高中組冠亞季軍／最佳口才獎"]
+    H --> MPU["理大 +10–30<br/>高級組冠亞季殿軍"]
+    H --> MUST["科大 語言＋數學各 +30–50<br/>高中最後三年內冠亞季軍"]
+    H --> UTM["旅大 優先錄取機會<br/>獲頒獎項，無分值"]
+```
+
+科大原文舉例：評定加 40 分，則所需三科各加 40，**總分共累加 120 分**。[MUST]
+
+### 2.3 理大加分（上一屆條文）
+
+| 計劃 | 條件 | 分數 | 來源 |
+| --- | --- | --- | --- |
+| 演辯精英 | 高中組演講比賽冠、亞、季軍；或高中辯論隊正選 | +20 | [MPU] |
+| 體育精英 | 國際／全國認可正式賽最近三年前十名；學界團體賽冠軍隊員；學界個人賽前三名；現役澳門代表隊或學界代表；澳門紀錄保持者 | +10–50 | [MPU] |
+| 全人發展 | 滙業盃**高級組**冠、亞、季、殿軍；或青年義工獎勵計劃白金／金／銀／銅獎 | +10–30 | [MPU] |
+| 夏令營 | 理大文化創意夏令營 | 設計類專設試 +10 | [MPU] |
+
+### 2.4 旅大「優先錄取」項目
+
+| 項目 | 只限筆試入學？ | 來源 |
+| --- | --- | --- |
+| 校際、省級、國家級、區域或國際比賽獲頒獎項 | 是 | [UTM] |
+| 修讀與旅大合作的中學課程 | 是 | [UTM] |
+| 滙業盃獲頒獎項 | 是 | [UTM] |
+| 澳門青年義工獎勵計劃獲頒獎項 | 是 | [UTM] |
+| 中國文化常識達標工程獲頒獎項 | 是 | [UTM] |
+| 高中修讀旅遊服務相關科目 | 是 | [UTM] |
+| 旅大「創意‧薈」比賽獲頒獎項 | 未附此限制 | [UTM] |
+
+舊版旅遊學院 FAQ 的百分比加分（如金獎 10%）屬 2018 年前後資料，**現已不適用**。[UTMOLD]
+
+### 2.5 免考：不是加分，但可免一科
+
+| 大學 | 科目 | 比賽／證書 | 門檻 | 來源 |
+| --- | --- | --- | --- | --- |
+| 澳大 | 數學正卷＋附加卷 | 教青局「校際數學比賽」 | 高中最後三年內**個人賽一或二等獎** | [UME] |
+| 澳大 | 英文 | TOEFL iBT／IELTS | 80／6.0；兩年內有效 | [UME] |
+| 理大 | 數學 | 全國奧數；校際數學比賽；港澳盃 | 高中組任何獎項 | [MPU] |
+| 理大 | 英文 | 「21 世紀杯」；全澳英語演講大賽 | 高中組／公開組任何獎項 | [MPU] |
+| 理大 | 英文 | IELTS／TOEFL iBT | 6.0／79 | [MPU] |
+| 理大 | 葡文 A 卷 | 歐洲語言共同參考框架葡語證明 | C1 | [MPU] |
+| 科大 | 數學 | 科大認可的奧數；教青局校際數學比賽 | 奧數任何獎項；校際**高中組個人二等獎或以上** | [MUST] |
+| 科大 | 英文 | IELTS 學術模式／TOEFL iBT | 6.0／79（新制 4）；兩年內有效 | [MUST] |
+| 旅大 | 數學 | 本地或國際奧數；教青局學界數學比賽；IGCSE | 高中組任何**個人**獎；IGCSE A 或 7 分 | [UTM] |
+| 旅大 | 英文 | TOEFL／IELTS／IGCSE／TOEIC | 550·213·79／6.0（各部 5.5）／B 或 6／750＋300 | [UTM] |
+
+澳大免考申請期：**2026-12-09 至 2027-01-13**。[UME]
+
+---
+
+## 3. 「澳大加分、推薦有哪些比賽有幫助？」<a id="q2"></a>
+<!-- card: 澳大加分與推薦 | 科普 11 項、人文 9 項、校長推薦 -->
+
+### 3.1 澳大 2027/2028 加分計劃
+
+| 規則 | 官方原文內容 | 來源 |
+| --- | --- | --- |
+| 對象 | 現正於本澳中學就讀高中三年級，並參加本年度入學考試 | [UM] |
+| 分值 | 所報考入學考試科目獲加 **20–50 分** | [UM] |
+| 未列名獎項 | 可申請，但**必須上載比賽章程及獲獎名單**，否則不獲處理 | [UM] |
+| 申請期 | 2027-01-18 至 29；須先完成 2027-01-06 至 20 入學考試報名 | [UM] [UME] |
+
+**科普（11 項，高中最後三年內）** [UM]
+
+| 條文 | 比賽 | 要求 |
+| --- | --- | --- |
+| 2.1(a) | 全國中小學信息技術創新與實踐活動澳門區選拔賽（NOC） | 高中組冠、亞、季軍 |
+| 2.1(b) | 澳門青少年綜合機械人科普活動選拔大賽 | 獲獎 |
+| 2.1(c) | 全澳青少年創新挑戰賽／全國青少年科技創新大賽 | 個人／集體項目獲獎 |
+| 2.1(d) | 潛能拓展創新菁英賽／國際科學與工程大獎賽選拔活動 | 獲獎 |
+| 2.1(e) | 「明天小小科學家」獎勵活動 | 獲獎 |
+| 2.1(f) | 學界化學比賽 | 學生個人獎 |
+| 2.1(g) | 學界物理比賽 | 高級組個人獎 |
+| 2.1(h) | 學界數學比賽 | 高中組個人獎 |
+| 2.1(i) | 通訊博物館電子裝置製作比賽 | 高中組獲獎 |
+| 2.1(j) | 澳門中學生趣味科學比賽 | 高中組獲獎 |
+| 2.1(k) | 中銀科創菁英挑戰賽 | 一、二、三等獎 |
+
+**人文（9 項）** [UM]
+
+| 條文 | 比賽 | 要求 | 時間 |
+| --- | --- | --- | --- |
+| 2.2(a) | 中學校際辯論比賽 | 冠亞季軍；準決賽／決賽最佳辯論員 | 高中最後三年內 |
+| 2.2(b) | 中學校際戲劇比賽 | 個人獎項 | 高中最後三年內 |
+| 2.2(c) | 全澳學生朗誦比賽 | 高中組獨誦特優獎 | 高中最後三年內 |
+| 2.2(d) | 滙業盃常識問題比賽 | 高中組冠亞季軍；最佳口才獎 | 高中最後三年內 |
+| 2.2(e) | 澳門青少年外交知識競賽 | 冠亞季軍 | 高中最後三年內 |
+| 2.2(f) | 全澳英語演講大賽 | 高中組冠亞季軍 | 高中最後三年內 |
+| 2.2(g) | 我與《憲法》和《基本法》演講比賽 | 優秀團隊金銀銅獎；個人決賽冠亞季軍 | 高中最後三年內 |
+| 2.2(h) | 「全民國家安全教育展」舉辦之比賽 | 一、二、三等獎 | **中學階段** |
+| 2.2(i) | 全國學生「學憲法講憲法」活動 | 冠亞季軍；一二三等獎；最佳風采／表達獎 | **中學階段** |
+
+**體育**：見 [第 6 節](#qsport)（體育入學及加分）及 [第 8 節](#q6)（代表隊）。**音樂、全人發展**：見 [第 10 節](#q8)（證書）。
+
+### 3.2 澳大推薦途徑
+
+| 途徑 | 比賽的作用 | 逐獎分數 | 來源 |
+| --- | --- | --- | --- |
+| 校長推薦 | 高二成績須全級首 10%；未達者如有**學術獎項**（學科公開比賽、公開考試）或**非學術特長**（音樂、體育），校長亦可推薦 | 未公布 | [UMPRA] |
+| 傑出運動員入學 | 過去兩年代表澳門參加國際／地區體育賽，及／或學界前三名；免四校聯考，總名額 70 名；詳見 [第 6 節](#qsport) | 未公布 | [UMPRA] [UMSPORT] |
+
+---
+
+## 4. 「香港各大學，哪些比賽有幫助？」<a id="q3"></a>
+<!-- card: 香港各大學 | 城大申請與獎學金、理大 STARS、科大奧賽獎學金、哪些不能套用 -->
+
+```mermaid
+flowchart TD
+    MO["澳門學生<br/>（非本地申請人）"]
+    MO -- "可申請" --> P1["香港理大 STARS<br/>直接錄取／有條件錄取／加分"]
+    MO -- "大學提名" --> P2["香港科大奧賽獎牌獎學金"]
+    MO -- "可被考慮" --> P3["中大入學獎學金"]
+    MO -- "直接申請" --> P4["城大國際招生<br/>入學獎學金按成績自動評定"]
+    MO -- "運動員" --> P5["城大 OAES<br/>全額學費＋宿舍獎學金"]
+    MO -. "不能套用" .-> X1["港大多元卓越計劃：限內地高考"]
+    MO -. "不能套用" .-> X2["中大經濟學競賽加分：限本地 Non-JUPAS"]
+    MO -. "不能套用" .-> X3["科大 Science Focus：限香港中學生 JUPAS"]
+    MO -. "不能套用" .-> X4["教大自薦：限 JUPAS"]
+```
+
+| 大學／計劃 | 認可內容 | 類型 | 澳門學生能否用？ | 來源 |
+| --- | --- | --- | --- | --- |
+| 香港理大 STARS | STEM、體育、藝術文化、領導服務；最多填 3 項；須官方證明 | ② 直接錄取、有條件錄取或加分 | **可以**，官方明言歡迎非本地申請 | [STARS] |
+| 香港科大奧賽獎學金 | IMO、IPhO、IChO、IBO、IOI；APMO、APIO、APhO | ④ 國際金牌：全額學費＋每年 HK$60,000；國際銀牌：全額學費；亞洲金牌：全額學費＋每年 HK$30,000 | 頁面未限國籍；**毋須申請，由學院提名** | [USTO] |
+| 香港科大理學院 | 國際物理／數學奧賽香港隊成員或獎牌得主 | ③ 有利考慮 | 未寫澳門代表等同香港隊 | [USTFAQ] |
+| 中大經濟學 | S.T. Yau 經濟金融建模獎、Play It Forward@APEC、數學奧賽 | ② 加分，無數值 | **否**；非本地（澳門）頁沒有此條 | [CUHKE] [CUHKN] |
+| 中大入學獎學金 | 優秀學術／非學術表現 | ④ | 可被考慮 | [CUHKS] |
+| 港大多元卓越計劃 | 學科競賽、文體 | ② | **否**，限內地高考 | [HKUG] [HKUGUIDE] |
+| 港大頂尖運動員直接入學 | 傑出體育表現 | ③ | 按計劃資格核對 | [HKUS] [HKUS26] |
+| 城大國際招生（澳門學歷） | 頁面沒有比賽加分或比賽獎項條文；按學歷及英語要求審核 | — | **可以申請**；詳見 4.1 | [CITYINT] |
+| 城大入學獎學金（國際生） | 學業成績優異 | ④ 全額學費＋生活津貼／全額學費／半額學費 | 毋須申請，按成績評定 | [CITYSCH] |
+| 城大 OAES（非本地傑出運動員入學獎學金） | 18 個運動項目的傑出成績 | ③④ 入圍者獲推薦予學院作入學考慮；全額學費＋宿舍獎學金 | **可以**，專為非本地學生而設；詳見 [第 6 節](#qsport) | [CITYS] |
+| 城大 SAAS／SALSA | 運動員 | ③ | SAAS 要交 JUPAS／non-JUPAS 紀錄及香港體院或體育總會推薦信；SALSA 要求**有資格代表香港** | [CITYSAAS] [CITYSALSA] |
+| 教大自薦 | 音樂、體育、STEAM、視藝 | ③ | 屬 JUPAS；非本地循 Non-JUPAS | [EDUS] [EDUN] |
+
+### 4.1 香港城市大學：澳門學生怎樣申請（2027 年入學）
+
+| 項目 | 官方內容 | 來源 |
+| --- | --- | --- |
+| 申請途徑 | 澳門學生屬非本地申請人，循「International Admissions」網上直接申請；不經 JUPAS | [CITYINT] |
+| 接受的澳門學歷 | 「Macao, China」一欄列出：**Senior Secondary School Graduation Diploma**（高中畢業文憑，申請一年級入學）；或 GCE／International A-level 三科合格 | [CITYINT] |
+| 四校聯考成績 | 該欄沒有提及四校聯考（JAE） | [CITYINT] |
+| 英語要求 | 持國際學歷者須符合英語要求，例如 **IELTS 學術類總分 6.5** 或以上；TOEFL iBT **79**（2026-01-21 前應考）或新制 **4.5**（該日或之後應考）。IELTS Online、TOEFL 家庭版不接受 | [CITYINT] |
+| 面試 | 視乎所報課程，可能需要面試（可用電話或視像） | [CITYINT] |
+| 申請日期 | 2026-09-24 開始；**提前批 2026-11-15 截止**；**主要批次 2027-01-15 截止**；主要批次結果 2027 年 2 至 5 月 | [CITYINT] |
+| 入學獎學金 | 三級：Top（全額學費＋每年最高 HK$60,000 生活津貼）、全額學費、半額學費；**毋須申請**，按成績評定；每年須達指定 CGPA 才可續領 | [CITYSCH] |
+| 留位費 | 非本地學生 2027/28 為 HK$20,000，入學後抵扣學費 | [CITYINT] |
+| 比賽獎項的作用 | 國際招生頁及獎學金頁**沒有列出**任何比賽加分、免試或點名比賽 | [CITYINT] [CITYSCH] |
+| 各課程收生分數（澳門學歷） | 未公布（頁面只提供 IB／GCE A-level 參考分數） | [CITYINT] |
+
+**一句話：** 城大對澳門學生看的是高中成績和英語成績；比賽獎項沒有明文加分。唯一明文點名「非學術成就」的途徑是運動員的 OAES。[CITYINT] [CITYS]
+
+**香港理大 STARS 官方舉例（不是封閉名單）：** APMO；國際信息學、化學、物理、生物等奧賽；ISEF；奧運、亞運、殘奧；蕭邦、柴可夫斯基國際鋼琴賽；Global Young Leaders Conference 等。[STARS]
+
+**大學自辦、明言加分的活動（全部為香港本地途徑）**
+
+| 活動 | 作用 | 限制 | 來源 |
+| --- | --- | --- | --- |
+| 香港理大 Senior Secondary Python Programming Contest（2024） | 可評核加分 | 對象為香港中四／中五；相關課程 JUPAS Band A | [PYHK] |
+| 香港理大 Metaverse Creators of Tomorrow | 可評核加分 | JUPAS Band A | [META] [METAB] |
+| 香港理大 SCIENCE Young Talents／Young Minds | 優先考慮 | 香港中學生 | [PUSCI] [PUYM] |
+| 香港科大 Science Focus 系列比賽 | JUPAS OEA 可加分 | 香港全日制中學生 | [SF24] [SF25] [SF26] |
+
+**不要把香港理大 Python 比賽的條款套到 CPTTM 的 Python 比賽。**
+
+---
+
+## 5. 「內地名校，哪些比賽有幫助？」<a id="q4"></a>
+<!-- card: 內地名校 | 清華、北大、浙大、交大、復旦保送簡章 -->
+
+「前五」採 2026 軟科中國大學排名：清華、北大、浙大、上海交大、復旦。[RANK]
+
+```mermaid
+flowchart LR
+    S["澳門高三學生"] --> R1["澳門保送生<br/>教青局系統"]
+    S --> R2["四校聯考成績<br/>報內地高校"]
+    S --> R3["全國聯招<br/>港澳台僑"]
+    R1 --> T1["清華、北大：<br/>特長可放寬排名門檻"]
+    R1 --> T2["浙大、交大、復旦：<br/>筆試＋面試，無競賽分值"]
+    R2 --> T3["復旦、浙大：<br/>各科 950 或以上等"]
+    R3 --> T4["未查得競賽通用加分"]
+```
+
+### 5.1 2026 澳門保送生（五校簡章原文）
+
+| 大學 | 一般門檻 | 競賽／特長的作用 | 考核 | 來源 |
+| --- | --- | --- | --- | --- |
+| 清華 | 高中三年綜合成績**年級前三名**；藝術類前 10% | 數、物、化、生、信息學**奧賽表現突出**者，及科技、文學、文體、社團、公益突出者，**可適當放寬** | 初審＋語數英筆試＋中文面試 | [THU] |
+| 北大 | 三年成績**全校前三名** | 綜合素質突出者**可突破排名限制** | 面試，參考平時成績及綜合表現；擬招 20 人 | [PKU] |
+| 浙大 | 各學年成績優異 | **未列競賽作用** | 筆試×30%＋面試×70%；擬招 30 人 | [ZJU] |
+| 上海交大 | 各學年成績優異 | **未列競賽作用** | 審核材料＋筆試入圍＋面試；約 30 人 | [SJTU] |
+| 復旦 | 主要由中學推薦 | **未列競賽作用** | 教青局統一筆試＋專家面試；不超過 30 人 | [FDU] |
+
+**五校都沒有「某比賽＝加幾分」的對照表。** [BRIEF]
+
+### 5.2 不能套用到澳門學生的內地制度
+
+| 制度 | 結論 | 來源 |
+| --- | --- | --- |
+| 舊日高考奧賽、科技、體育加分 | **全國性加分已取消** | [CANCEL] |
+| 五大學科奧賽國家集訓隊保送 | 特定保送資格；澳門代表隊身分**不等同**國家集訓隊 | [MOE] [PKUO] |
+| 強基計劃競賽破格 | 須符合內地高考資格 | [FDUQJ] |
+| 全國聯招港澳台僑 | 未查得競賽／考級通用加分 | [JOINT] |
+| 用四校聯考成績報復旦、浙大 | 不會把澳大批准的加分帶過去；浙大可交獲獎材料供綜合評價 | [GOVJAE] [FDUJAE] [ZJUJAE] |
+
+---
+
+## 6. 「體育成績可以保送澳大嗎？校長推薦信有用嗎？四校有沒有體育加分？」<a id="qsport"></a>
+<!-- card: 體育成績可以保送澳大嗎？ | 澳大傑出運動員入學、校長推薦信、四校體育加分、香港各大學 -->
+
+**三句話答案：**
+
+1. 澳大沒有叫「保送」的途徑，但有「**傑出運動員入學計劃**」：由中學校長推薦，甄選通過者**無需參加四校聯考**，總名額 **70 名**。[UMSPORT] [UMPRA]
+2. **校長推薦信不是加分**，它是一條獨立的免試入學途徑。高二成績未達全級首 10% 的同學，可憑**體育特長**由校長推薦，但仍要面試。[UMPRA]
+3. 四校聯考的體育加分只有兩間：**澳大 +20–50**、**理大 +10–50**。科大沒有體育加分（另設體育特長生）；旅大條文沒有點名體育。[UM] [MPU] [MUST] [MUSTT] [UTM]
+4. 香港各大學的運動員直接入學計劃，大多要求**有資格代表香港**，澳門代表不能套用。澳門學生可用的有三條：**城大 OAES**、**香港理大 STARS**、**香港科大 BAAS**，都要另外按非本地途徑報名。詳見 6.5。[CITYS] [STARS] [USTBAAS]
+
+```mermaid
+flowchart LR
+    S["有體育成績的<br/>高三學生"]
+    S --> R["校長推薦<br/>免四校聯考"]
+    S --> J["四校聯考<br/>申請體育加分"]
+    S --> T["其他體育途徑"]
+    R --> A["澳大傑出運動員入學<br/>代表澳門或學界前三名<br/>名額 70"]
+    R --> B["澳大校長推薦入學<br/>未達首 10% 可憑體育特長"]
+    J --> C1["澳大 +20–50"]
+    J --> C2["理大 +10–50"]
+    J --> C3["科大、旅大<br/>沒有體育加分分值"]
+    T --> D1["理大體育教育專才<br/>免筆試"]
+    T --> D2["科大體育特長生<br/>優先錄取"]
+```
+
+### 6.1 用體育成績免試入讀澳大：傑出運動員入學計劃（2027/2028）
+
+| 項目 | 官方條文 | 來源 |
+| --- | --- | --- |
+| 性質 | 屬「校長推薦入學」之下的計劃，由本地中學校長推薦優秀學生**免試入學**；甄選通過者「無需再參加四校聯考入學考試」 | [UMSPORT] [UMPRA] |
+| 基本資格 | 品行良好，運動成績優異；持有效澳門居民身份證；本學年澳門本地學校**高中三年級**註冊學生 | [UMPRA] |
+| 運動成績 | **過去兩年內**曾代表澳門特別行政區參與國際性／地區性比賽；**及／或**過去兩年內於學界比賽獲**前三名** | [UMPRA] |
+| 未達上項 | 如是澳門特別行政區代表、運動成績良好，可提交**體育總會的推薦書**，並經所屬中學校長推薦 | [UMPRA] |
+| 甄選 | 合資格者獲安排**學科專業面試**及**運動專項測試**；按運動比賽成績、學院面試及專項測試表現擇優錄取 | [UMSPORT] [UMPRA] |
+| 專項測試項目 | 羽毛球、男子籃球、女子籃球、龍舟、劍擊、空手道、合球、武術、攀岩、男子足球、壁球、游泳、乒乓球、網球、田徑、排球（2027/2028 測試內容將於 2026 年 10 月中旬更新） | [UMSPORT] |
+| 名額 | 總名額 **70 名** | [UMSPORT] |
+| 獎學金 | 所有錄取學生獲以下其中一類：金蓮花（首學年全免學費）、銀蓮花（首學年半免學費）、首年級獎學金（一次性 5,000 澳門元）、免考入讀（不發獎學金） | [UMSPORT] |
+| 入學後義務 | 不可更改課程；正常修讀年期內**必須加入澳大運動校隊**，代表澳大出賽。蓮花獎學金延續須平均績點 2.0 或以上、校隊訓練出席率 80% 或以上 | [UMSPORT] |
+| 學業成績 | 章程第 7.1 條：本校**有權不接受**高中二年級成績名列最優秀學生**百分之十以外**之申請。此條與上述運動資格如何並用，官方未說明 | [UMSPORT] |
+| 逐項運動成績換算 | 未公布 | [UMSPORT] |
+
+**提醒：** 這條途徑看的是「代表澳門」或「學界前三名」的**證明文件**，不是校內體育科分數。體育科成績高，本身不構成資格。[UMPRA]
+
+### 6.2 校長推薦信進澳大：校長推薦入學計劃（2027/2028）
+
+| 項目 | 官方條文 | 來源 |
+| --- | --- | --- |
+| 一般資格 | 品學兼優；澳門居民；本學年高三註冊學生；**高二成績全級首 10%**（包括所有文、商、理及其他組別） | [UMPRA] |
+| 未達首 10% | 學業成績良好，但具特別才能或傑出貢獻者，校長亦可推薦：**學術**獎項／資格（學科公開比賽或公開考試成績），或**非學術**獎項／資格（如**音樂或體育範疇之特長**） | [UMPRA] |
+| 要交的證明 | 高一及高二成績表；以特別才能身份獲推薦者，須交中學階段獲獎證書及社會服務證明。**獎牌、獎盃的照片不可作證明**，須由相關單位發出獲獎證明 | [UMPRA] |
+| 面試 | 合資格申請人將獲安排面試 | [UMPRA] |
+| 錄取標準 | 校內學習表現、成績排名、學術或非學術特別才能、社會服務及面試表現等**綜合考量** | [UMPRA] |
+| 獎學金 | 有機會獲大蓮花、金蓮花、銀蓮花或首年級獎學金 | [UMPRA] |
+| 限制 | 獲錄取後不可更改課程；確認接受錄取後，如再循其他途徑報讀澳大學士課程，澳大有權取消錄取資格 | [UMPRA] |
+| 每校可推薦人數 | 規條未列明；向本校升學輔導查詢 | [UMPRA] |
+| 體育特長要達到甚麼水平 | 未公布 | [UMPRA] |
+
+**常見誤會：** 四校聯考的加分計劃裡**沒有「推薦信」這一項**。推薦信只在「校長推薦入學」途徑有用；走聯考的同學，要靠下表的體育獎項申請加分。[UM] [UMPRA]
+
+### 6.3 四校聯考的體育加分
+
+| 大學 | 體育加分 | 官方列明的資格 | 不適用／備註 | 申請期 | 來源 |
+| --- | --- | --- | --- | --- | --- |
+| **澳門大學** | **+20–50**（報讀志願所要求的各科） | 高中最後三年內：澳門區代表／澳門學界代表；澳門學界賽前三名；體育聯會賽事（世界錦標賽、世界盃、亞洲錦標賽、亞洲盃、全國錦標賽及三地或以上的地區性賽等）前三名；國家級及以上綜合運動會前三名；其他國際賽事前三名 | 後三類的邀請賽、選拔賽、測驗賽及表演賽不適用。單一類別最多 60 分，不同類別可累積 | **2027-01-18 至 29** | [UM] |
+| **澳門理工大學** | **+10–50**（入學筆試每項，專設試除外） | 最近三年在國際奧委會承認、國際單項體育聯會組織／認可的正式比賽獲**前 10 名**；澳門學界賽最近三年**冠軍隊伍成員**（團體）；澳門學界賽最近三年**個人賽前三名**；**現役**澳門各項運動代表隊隊員或澳門學界代表；各項運動澳門最高紀錄保持者 | 邀請賽、選拔賽、測驗賽、表演賽除外。每考試項目最多 60 分；最多交 10 項 | 上一屆 2025-12-01 至 2026-01-16；下一屆未公布 | [MPU] |
+| **澳門科技大學** | **沒有** | 加分計劃只有滙業盃 | 體育成績可另報「特長生」，見 6.4 | — | [MUST] |
+| **澳門旅遊大學** | **沒有分值** | 條文沒有點名體育。只有一項概括條文：以個人或團體名義參與校際、省級、國家級、區域或國際比賽獲頒獎項，**有機會獲優先錄取**（筆試入學適用） | 體育比賽是否計入，未公布 | 上一屆 2026-01-02 至 16 | [UTM] |
+
+**同一個學界前三名，兩校計法不同：** 澳大看「高中最後三年內」；理大看「最近三年」，而且團體項目要是**冠軍**隊成員。申請前逐字對照。[UM] [MPU]
+
+### 6.4 不靠聯考加分的其他體育途徑
+
+| 途徑 | 資格 | 作用 | 條文年度 | 來源 |
+| --- | --- | --- | --- | --- |
+| 理大「專才入學」體育教育學士 | **現役**澳門各項運動代表隊隊員或澳門學界代表 | ③ 豁免入學筆試，憑面試成績提前錄取 | 上一屆（報名 2025-12-01 至 11） | [MPUT] |
+| 科大體育特長生 | 過去三年內曾代表學校或地區參加相關項目比賽，並獲**地區（含）以上**比賽優異成績；項目：足球（男）、籃球、羽毛球、乒乓球、排球（男）、網球、擊劍、武術、龍舟、賽艇 | ③ 優先錄取／優先錄取首選專業／優先頒發獎學金。**仍須達到入學途徑的文化成績要求**，並通過專業面試 | 2026/2027 簡章（2026 年 1 月） | [MUSTT] |
+| 理大中學校長推薦入學 | 頁面沒有提及體育；具體詳情「可向就讀中學了解」。通過面試可獲直接錄取 | ③ | 2027/2028 | [MPUPRA] |
+| 旅大校長推薦 | 獲高中學校校長推薦（須參加入學面試）；條文沒有提及體育 | ③ | 未標示年度 | [UTM] |
+| 科大推薦入學 | 招生日程頁只列報名日期，資格未在該頁公布 | 未公布 | 2027/2028 | [MUSTPRA] |
+
+### 6.5 體育成績能否「保送」香港各大學？
+
+**結論：** 香港沒有一條途徑叫「保送」。大學教育資助委員會的 SALSA 計劃及各校的運動員直接入學計劃，條文都寫明對象是**本地**精英運動員或**有資格代表香港**的運動員。澳門學生是非本地申請人，只能用下表標示「可以」的途徑。[CITYSALSA] [POLYOSRS] [BUTADAS] [USTSAAS]
+
+| 大學／計劃 | 澳門學生能否用？ | 官方條文 | 給甚麼 | 申請期（2027 年入學） | 來源 |
+| --- | --- | --- | --- | --- | --- |
+| **城大 OAES**（非本地傑出運動員入學獎學金） | **可以** | 專為非本地學生運動員而設；歡迎在 18 個項目有傑出成績者申請：田徑、足球、羽毛球、壁球、籃球、游泳、越野跑、乒乓球、龍舟、跆拳道、劍擊、網球、手球、排球、空手道、水球、欖球、活木球 | ③④ 入圍者獲推薦予相關學院作**入學考慮**；本科生全額學費（最長四年）＋宿舍獎學金，每年最高 HK$250,000；每年須運動表現滿意及 CGPA 2.5 或以上才續領 | 先循國際招生報名（主要批次 **2027-01-15** 截止），再交 OAES 申請（**2027-01-30** 截止） | [CITYS] |
+| **香港理大 STARS**（體育範疇） | **可以** | 官方明言歡迎非本地申請；按比賽規模、獎項及名次評核；舉例：奧運、亞運、東亞運、殘奧 | ② 合資格者獲邀面試，可獲直接錄取、有條件錄取或加分；自動考慮入學獎學金 | 見官方頁 | [STARS] |
+| **香港科大 BAAS**（Sports & E-Sports） | **可以** | 開放予全球準學生（內地高考生除外）；須在本地、區域或國際層面有令人滿意的表現；**仍須符合大學最低入學要求**、課程及英語要求 | ②④ 入學時獲有利考慮；一次性獎學金 HK$50,000 | 非 JUPAS：優先批次 **2026-11-25** 截止；滾動批次 2027 年 1 月初截止 | [USTBAAS] |
+| 香港科大 SAAS | **否** | 須為本地學生：擁有香港居留權，或持入境處證明的本地學生身份。頁面指示非本地申請人改報 BAAS | — | — | [USTSAAS] |
+| 香港理大 OSRS | **否** | 對象為**本地**精英運動員，須有資格代表香港參加國際單項總會認可的比賽 | — | 2026-11-01 至 30 | [POLYOSRS] |
+| 城大 SAAS | 未列明 | 須交 JUPAS 選科或 non-JUPAS 申請紀錄，及香港體育學院／體育總會／體育會／學校的推薦信；非本地學生另設 OAES | — | 第一批 2026-11-11 截止 | [CITYSAAS] |
+| 城大、理大、中大等 SALSA（教資會計劃） | **否** | 須獲香港體育學院提名，或屬認可體育總會並達精英評級 3 分或以上；並須**有資格代表香港** | — | — | [CITYSALSA] |
+| 浸大 TADAS | **否** | 對象為本地運動員：有資格正式代表**中國香港**參加區域及國際賽，並獲體育機構提名 | — | — | [BUTADAS] |
+| 浸大 SETDAS（體育屬認可範疇） | 未說明 | 非本地非內地申請人須持有「一帶一路」參與國家的國籍；澳門居民是否符合，頁面沒有說明 | ③ 獲評核合資格者可豁免一般及課程入學要求 | 2026-10-02 至 2027-05-31 | [BUDAS] |
+| 中大體育獎學金 | **否** | 頁面寫明提供予 JUPAS 及 Non-JUPAS（**本地**）學生 | — | — | [CUHKS] |
+| 中大入學獎學金（非學術表現） | 可被考慮 | 本地及非本地新生均可因學術或非學術優異表現獲獎；毋須申請 | ④ 只是獎學金，不是入學途徑 | — | [CUHKS] |
+| 港大頂尖運動員直接入學 | 未說明 | 須由香港體育學院或其他體育總會提名；頁面沒有說明非本地學生是否適用 | ③ | — | [HKUS] |
+| 教大自薦／精英運動員提名 | **否** | 自薦計劃只限 JUPAS 申請人 | — | — | [EDUS] [EDUSALSA] |
+| 嶺大精英運動員獎學金 | 本次未能核實 | 官網設有防護，本次未能開啟原頁 | — | — | [LNEA] |
+
+**澳門學生走香港運動員途徑，要留意三點：**
+
+- **都不是免試。** 城大 OAES 要先完成入學申請，再由學院考慮；科大 BAAS 寫明仍須達到最低入學要求；理大 STARS 要面試。三校都沒有寫「免成績」。[CITYS] [USTBAAS] [STARS]
+- **成績門檻沒有數字。** 三校都只寫「傑出」「令人滿意」，沒有公布要甚麼級別的比賽或名次。[CITYS] [USTBAAS] [STARS]
+- **城大 OAES 要交的文件較多：** 教練或領隊簽署的推薦信（證明兩年內的運動表現）、成績單連 IELTS／TOEFL 證書、列明運動成績的履歷連比賽影片連結、三個月內的醫生證明、大學的入學申請確認電郵。[CITYS]
+
+### 6.6 有體育成績的同學，現在要做甚麼
+
+| 先後 | 要做的事 | 期限 | 來源 |
+| --- | --- | --- | --- |
+| 1 | 找班主任／升學輔導，確認學校是否推薦你；理大校長推薦 2027/2028 報名 | **2026-09-23 至 10-07** | [MPUPRA] |
+| 2 | 澳大校長推薦（包括傑出運動員入學計劃）網上報名 | **2026-09-23 至 10-09** | [UMPRA] |
+| 3 | 向體育總會或學界賽主辦方索取**正式證明**：代表澳門的參賽證明、學界前三名證書，或體育總會推薦書 | 報名前 | [UMPRA] |
+| 4 | 澳大公布面試資格；面試 | 2026-11-09 至 15；面試 11-14 至 15 | [UMPRA] |
+| 5 | 澳大公布面試結果 | 2026 年 12 月中旬 | [UMPRA] |
+| 6 | **沒有獲推薦或未獲錄取**：照常報四校聯考，並用同一批體育證明申請澳大加分 | 報名 2027-01-06 至 20；加分 2027-01-18 至 29 | [UM] [UME] |
+| 7 | 留意理大下一屆加分及體育教育專才日期 | 未公布 | [MPU] [MPUT] |
+| 8 | **想去香港：** 先考 IELTS／TOEFL；香港科大 BAAS 非 JUPAS 優先批次 | 2026-11-25 | [USTBAAS] |
+| 9 | 想去香港：城大國際招生主要批次，其後交 OAES | 2027-01-15；OAES 2027-01-30 | [CITYINT] [CITYS] |
+
+**老師可以這樣回答學生：**
+
+| 學生問 | 老師答 |
+| --- | --- |
+| 「我體育成績好，可以保送澳大嗎？」 | 澳大沒有「保送」，但有傑出運動員入學計劃，免四校聯考。要有過去兩年代表澳門出賽或學界前三名的證明，再由校長推薦，並通過面試和專項測試。 |
+| 「拿校長推薦信可以加分嗎？」 | 不可以。推薦信不是加分項目，它是另一條入學途徑。 |
+| 「我成績不到首 10%，校長還能推薦我嗎？」 | 規條容許：學業成績良好而有體育或音樂特長，校長可以推薦。但錄取是綜合考量，官方沒有公布體育特長要到甚麼水平。 |
+| 「體育在四校聯考有加分嗎？」 | 澳大和理大有，科大和旅大沒有分值。澳大 +20–50，理大 +10–50，兩校資格寫法不同。 |
+| 「校內體育科分數高有用嗎？」 | 條文看的都是比賽成績或代表資格，沒有一條寫校內體育科分數。 |
+| 「可以用體育保送去香港的大學嗎？」 | 香港沒有保送。多數運動員入學計劃要有資格代表香港，澳門代表不能用。澳門學生可報城大 OAES、理大 STARS、科大 BAAS，但都要另外報名、達到英語和入學要求，不是免試。 |
+
+---
+
+# 第二部分：教師想知道
+
+## 7. 「什麼單位辦的比賽對升學有幫助？」<a id="q5"></a>
+<!-- card: 什麼單位辦的比賽有用？ | 主辦單位與被點名比賽的關係圖 -->
+
+**結論：沒有「某單位主辦，所有比賽都加分」的通則。** 大學點名的是**具體比賽名稱**，不是主辦單位。[UM] [MPU]
+
+```mermaid
+flowchart LR
+    subgraph ORG["主辦／承辦單位"]
+        O1["教青局主辦<br/>電腦學會承辦"]
+        O2["教青局"]
+        O3["文化局、管弦協會<br/>或其他官方團體"]
+        O4["通訊博物館"]
+        O5["法務局、教青局、市政署<br/>基本法推廣協會"]
+        O6["特區政府、外交公署<br/>教青局承辦"]
+        O7["澳大科普推廣中心"]
+        O8["理大主辦<br/>貝爾英語中心承辦"]
+        O9["CPTTM"]
+    end
+    subgraph COMP["被大學點名的比賽"]
+        C1["NOC 澳門區選拔賽"]
+        C2["校際／學界數學比賽"]
+        C3["國際／地區音樂表演或比賽"]
+        C4["電子裝置製作比賽"]
+        C5["憲法和基本法演講比賽"]
+        C6["青少年外交知識競賽"]
+        C7["中銀科創菁英挑戰賽"]
+        C8["全澳英語演講大賽<br/>21 世紀杯"]
+    end
+    O1 --> C1
+    O2 --> C2
+    O3 --> C3
+    O4 --> C4
+    O5 --> C5
+    O6 --> C6
+    O7 --> C7
+    O8 --> C8
+    C1 & C2 & C3 & C4 & C5 & C6 & C7 & C8 --> UM["澳大 +20–50"]
+    C8 --> MPU["理大演辯 +20／英文免考"]
+    C2 --> EX["四校數學免考"]
+    O9 -. "沒有比賽被點名" .-> NONE["未公布加分"]
+```
+
+| 主辦／承辦 | 被點名的比賽 | 優惠 | 界線 | 來源 |
+| --- | --- | --- | --- | --- |
+| 教青局主辦、澳門電腦學會承辦 | NOC 澳門區選拔賽 | 澳大高中組冠亞季軍 +20–50 | 不擴及電腦學會其他賽事 | [NOC] [UM] |
+| 教青局 | 校際／學界數學比賽 | 澳大加分＋四校數學免考 | 個人／團體、獎等須分別核對 | [UM] [UME] [MPU] [MUST] [UTM] |
+| 文化局、澳門管弦協會或其他官方團體 | 國際／地區性音樂表演或比賽 | 澳大：**參加證明**可申請 | 只限樂器 | [UM] |
+| 通訊博物館 | 電子裝置製作比賽 | 澳大高中組獲獎 | 2027 屆報名截止 2026-11-30 | [CMM] [CMM27] [UM] |
+| 法務局、教青局、市政署、基本法推廣協會 | 憲法和基本法演講比賽 | 澳大指定獎項 | 不擴及其他普法活動 | [LAW] [UM] |
+| 特區政府、外交公署主辦；教青局承辦 | 青少年外交知識競賽 | 澳大冠亞季軍 | — | [DIP] [UM] |
+| 澳大科普推廣中心、校友及發展辦公室 | 中銀科創菁英挑戰賽 | 澳大一二三等獎 | 不代表所有中銀活動 | [BOC] [UM] |
+| 理大主辦；理大－貝爾英語中心承辦 | 全澳英語演講大賽暨 21 世紀杯澳門分區賽 | 澳大高中冠亞季軍；理大演辯 +20、英文免考 | — | [ESC] [UM] [MPU] |
+| 滙業盃（主辦名稱未能再核實） | 滙業盃中學生常識問答比賽 | 澳大、理大、科大分值；旅大優先 | 獎等各校不同 | [DELTA] [UM] [MPU] [MUST] [UTM] |
+
+---
+
+## 8. 「奧林匹克、澳門代表隊，對升學有甚麼幫助？」<a id="q6"></a>
+<!-- card: 奧林匹克與澳門代表 | 體育代表與學科奧賽代表的分別 -->
+
+**關鍵：「體育代表」和「學科奧賽代表」在招生條文中是兩回事。**
+
+```mermaid
+flowchart TD
+    S["澳門學生"] --> T1["體育代表<br/>澳門代表隊／學界代表"]
+    S --> T2["學科奧賽代表或獎項<br/>IMO、IOI、APMO 等"]
+    T1 --> U1["澳大 +20–50"]
+    T1 --> U2["理大 +10–50（現役）"]
+    T1 --> U3["理大體育教育專才：免筆試"]
+    T1 --> U4["澳大傑出運動員入學<br/>免四校聯考"]
+    T2 --> V1["澳大：未列名，交章程＋名單評核"]
+    T2 --> V2["澳大校長推薦：學術獎項可作依據"]
+    T2 --> V3["理大電腦學／AI 專才：免筆試"]
+    T2 --> V4["奧數個人獎：理大、科大、旅大數學免考"]
+    T2 --> V5["香港理大 STARS：可評核"]
+    T2 --> V6["香港科大：獎牌獎學金"]
+    T2 --> V7["清華保送：可放寬排名"]
+```
+
+| 資格 | 大學／途徑 | 作用 | 來源 |
+| --- | --- | --- | --- |
+| 澳門區代表／學界代表（體育） | 澳大加分 | ① +20–50，高中最後三年內 | [UM] |
+| 體育聯會賽、綜合運動會、國際賽前三名 | 澳大加分 | ① +20–50；邀請、選拔、測驗、表演賽不適用 | [UM] |
+| 現役澳門代表隊／學界代表；認可正式賽最近三年前十名 | 理大加分 | ① +10–50 | [MPU] |
+| 過去兩年代表澳門出賽，及／或學界前三名 | 澳大傑出運動員入學計劃 | ③ 免四校聯考；面試＋專項測試；名額 70 | [UMPRA] [UMSPORT] |
+| 現役澳門代表隊／學界代表 | 理大體育教育專才 | ③ 免筆試，憑面試提前錄取 | [MPUT] |
+| 過去三年代表學校或地區，地區或以上比賽優異成績 | 科大體育特長生 | ③ 優先錄取／優先獎學金；仍須達文化成績 | [MUSTT] |
+| 最近五屆奧運獎牌 | 理大傑出國際運動員獎學金 | ④ | [MPUO] |
+| 澳門**學科奧賽**代表隊 | 澳大加分 | **不能套用體育代表加分**；按未列名程序申請 | [UM] |
+| 學科公開比賽獎項 | 澳大校長推薦 | ③ 可突破首 10% 門檻 | [UMPRA] |
+| 計算機／AI 類比賽優異獎項（IOI、MOI 未被點名） | 理大電腦學、人工智能專才 | ③ 免筆試，憑面試提前錄取 | [MPUT] |
+| 奧數個人獎 | 理大、科大、旅大 | ③ 數學免考 | [MPU] [MUST] [UTM] |
+| APMO；信息學、化學、物理、生物等國際奧賽 | 香港理大 STARS | ② | [STARS] |
+| IMO、IOI 等國際金／銀牌；APMO、APIO、APhO 金牌 | 香港科大 | ④ 學費＋生活津貼 | [USTO] |
+| 數、物、化、生、信息學奧賽突出 | 清華澳門保送 | ③ 放寬排名 | [THU] |
+| 國家集訓隊 | 內地學科競賽保送 | 澳門代表**不等同** | [MOE] [PKUO] |
+
+**澳門電腦學會 MOI：** 章程中的「加分」是**賽內計分**，不是大學加分。[MOI]
+
+---
+
+## 9. 「政府機關辦的比賽，哪些有幫助？」<a id="q7"></a>
+<!-- card: 政府機關辦的比賽 | 教青局、文化局、內地教育部等 -->
+
+| 政府機關 | 比賽 | 有正式升學作用？ | 來源 |
+| --- | --- | --- | --- |
+| **澳門教青局** | NOC 澳門區選拔賽（主辦） | 有：澳大加分 | [NOC] [UM] |
+| 澳門教青局 | 校際／學界數學比賽 | 有：澳大加分＋四校免考 | [UM] [UME] [MPU] [MUST] [UTM] |
+| 澳門教青局 | 外交知識競賽（承辦）、憲法基本法演講（合辦） | 有：澳大加分 | [DIP] [LAW] [UM] |
+| 澳門教青局 | 與 CPTTM 合辦的 MOS、ACP、手機網站、網絡技能等比賽 | **未公布** | [CMOS] [C249] [C264] [C252] |
+| 澳門文化局 | 國際／地區音樂表演或比賽 | 有：澳大，只限樂器 | [UM] |
+| 通訊博物館 | 電子裝置製作比賽 | 有：澳大 | [CMM] [UM] |
+| 法務局、市政署 | 憲法基本法演講比賽（合辦） | 有：澳大 | [LAW] [UM] |
+| 外交部駐澳公署 | 青少年外交知識競賽（主辦） | 有：澳大 | [DIP] [UM] |
+| 廉政公署 | 青少年反貪程式應用方案設計比賽（與 CPTTM 合辦） | **未公布** | [C262] [CCAC] |
+| 科學館 | 青少年科普影片製作比賽（與 CPTTM 等合辦） | **未公布**；不是澳大列名的趣味科學比賽 | [C261] |
+| **內地教育部** | 五大學科奧賽國家集訓隊保送 | 澳門代表隊不等同 | [MOE] [PKUO] |
+| 內地教育部 | 高考加分 | **全國性競賽加分已取消** | [CANCEL] |
+| 內地教育部 | 白名單 47 項全國性競賽 | **不得作招生入學依據及高考加分**；詳見 [第 12 節](#q10) | [MOEWL] |
+| **香港政府機關** | — | 本文件來源中**未查得**香港政府主辦、被大學點名加分的中學生比賽；香港有加分作用的活動由**大學自辦** | [PYHK] [META] [SF26] |
+
+**一句話：** 「政府合辦」不等於加分。只有被招生條文**逐字點名**的比賽才有分值。[UM] [CLIST]
+
+---
+
+## 10. 「哪些證書最有用？」（按領域）<a id="q8"></a>
+<!-- card: 哪些證書有用？ | 音樂、舞蹈、語言、全人、IT -->
+
+```mermaid
+flowchart LR
+    subgraph CERT["證書領域"]
+        M["音樂考級"]
+        D["舞蹈考級"]
+        L["語言證書"]
+        V["義工／全人"]
+        I["IT 認證"]
+    end
+    M --> M1["澳大加分 +20–50"]
+    M --> M2["科大藝術特長生"]
+    D --> D1["澳大加分 +20–50"]
+    L --> L1["四校英文／葡文免考"]
+    L --> L2["理大翻譯／葡語專才"]
+    V --> V1["澳大、理大加分<br/>旅大優先錄取"]
+    I -. "未被任何大學點名" .-> I1["未公布加分"]
+```
+
+| 領域 | 證書 | 門檻 | 作用 | 來源 |
+| --- | --- | --- | --- | --- |
+| **音樂** | 英國皇家音樂學院 ABRSM | 第五級或以上（樂器） | 澳大 +20–50；獲獎時間不限 | [UM] |
+| 音樂 | 英國倫敦音樂學院 LCM | 第五級或以上（樂器） | 澳大 +20–50 | [UM] |
+| 音樂 | 中央音樂學院音樂水平考級 | 第六級或以上 | 澳大 +20–50 | [UM] |
+| 音樂 | 西洋／民族樂器業餘考級 | 8 級以上（內地生 9 級） | 科大藝術特長生資格 | [MUSTT] |
+| **舞蹈** | 北京舞蹈學院中國舞考級 | 第七級或以上 | 澳大 +20–50 | [UM] |
+| 舞蹈 | 英國皇家舞蹈學院 RAD | 第五級或以上 | 澳大 +20–50 | [UM] |
+| 舞蹈 | 澳洲聯邦舞蹈教師協會 CSTD | 第六級或以上 | 澳大 +20–50 | [UM] |
+| **英語** | IELTS | 澳大 6.0；理大 6.0；科大學術模式 6.0；旅大 6.0（各部 5.5） | 英文免考 | [UME] [MPU] [MUST] [UTM] |
+| 英語 | TOEFL iBT | 澳大 80；理大 79；科大 79／新制 4；旅大 79 | 英文免考 | [UME] [MPU] [MUST] [UTM] |
+| 英語 | TOEIC | 閱讀與聆聽 750；寫作與口語 300 | 旅大英文免考 | [UTM] |
+| 英語 | IGCSE（第二語言） | B 或 6 分 | 旅大英文免考 | [UTM] |
+| 英語 | IB、GCSE、CPE／CAE、SAT | 見原文 | 科大**醫學**課程英文免考 | [MUST] |
+| **葡語** | 歐洲語言共同參考框架葡語證明 | C1 | 理大葡文 A 卷免考 | [MPU] |
+| 葡語 | CAPLE、Celpe-Bras | — | 理大翻譯、葡語專才資格 | [MPUT] |
+| **數學** | IGCSE O Level | A 或 7 分 | 旅大數學免考 | [UTM] |
+| **全人** | 澳門青年義工獎勵計劃 | 白金／金／銀／銅獎 | 澳大 +20–50；理大 +10–30；旅大優先 | [UM] [MPU] [UTM] |
+| 全人 | 中國文化常識達標工程 | 獲頒獎項 | 旅大優先 | [UTM] |
+| **IT** | MOS | — | **未公布加分**；認證與比賽獎是兩回事 | [CMOS] |
+| IT | Adobe ACP | — | **未公布**；理大媒體藝術接受「相關國際認可證書」但未點名 ACP | [C249] [MPUT] |
+| IT | 思科 CCNA 相關 | — | **未公布**；參加競賽不等於取得 CCNA | [C252] |
+
+**最實用的三類（按官方條文覆蓋面）：** 英語證書（四校免考）、音樂／舞蹈考級（澳大加分，時間不限）、青年義工獎勵計劃（澳大、理大、旅大三校）。[UM] [UME] [MPU] [MUST] [UTM]
+
+---
+
+## 11. 「澳門電腦學會、生產力中心等本地機構，對升學有甚麼幫助？」<a id="q9"></a>
+<!-- card: 電腦學會、CPTTM | 本地機構比賽的實際作用 -->
+
+```mermaid
+flowchart TD
+    MCS["澳門電腦學會"] --> NOC["NOC 澳門區選拔賽<br/>（教青局主辦，學會承辦）"]
+    MCS --> MOI["MOI 信息學奧林匹克"]
+    NOC --> UMB["澳大加分 +20–50<br/>高中組冠亞季軍"]
+    MOI --> MOIX["章程「加分」是賽內計分<br/>大學未點名"]
+    MOI -.-> OPEN["可走：澳大未列名評核<br/>理大電腦學／AI 專才<br/>香港理大 STARS"]
+    CPT["CPTTM 生產力暨科技轉移中心"] --> CPC["Python、MOS、ACP、網站、<br/>網絡、問答、時尚技術等"]
+    CPC --> NO["沒有任何大學點名<br/>未公布加分"]
+    CPC -.-> OPEN
+```
+
+### 11.1 澳門電腦學會
+
+| 項目 | 結論 | 來源 |
+| --- | --- | --- |
+| NOC 澳門區選拔賽 | 教青局主辦、電腦學會承辦（2022/2023 公告）；澳大加分只限**這個比賽**高中組冠亞季軍 | [NOC] [UM] |
+| MOI | 未公布大學分值；章程「加分」是賽內計分 | [MOI] |
+| 獎狀名稱與 NOC 不同 | 按澳大未列名程序提交章程及得獎名單 | [ITINNO] [UM] |
+
+### 11.2 CPTTM（生產力暨科技轉移中心）
+
+**結論：沒有任何大學寫明「CPTTM 比賽可加分」；CPTTM 比賽目錄亦沒有提及升學或加分。** [CLIST]
+
+| 比賽（官方名稱） | 主辦／合辦 | 升學加分 | 報名狀態（2026-10-07） | 來源 |
+| --- | --- | --- | --- | --- |
+| 2026 年全澳中學生 Python 解難比賽 | 頁面未列明 | 未公布 | — | [C247] |
+| 2026 年全澳中學生手機網站技術技能比賽 | CPTTM、教青局 | 未公布 | 未開放 | [C264] [CLIST] |
+| 2026 年全澳中學生資訊科技知識問答比賽 | 頁面未列明 | 未公布（**不是**滙業盃） | 未開放 | [C265] [CLIST] |
+| 第十八屆澳門學生 Office 軟件技能比賽（MOS） | CPTTM、教青局 | 未公布 | — | [CMOS] |
+| 第十三屆澳門學生多媒體設計軟件技能比賽（ACP） | CPTTM、教青局 | 未公布 | — | [C249] |
+| 港澳青少年網絡技能競賽／思科網絡技能競賽 | CPTTM、教青局、思科網絡學院等 | 未公布 | — | [C252] |
+| 青少年反貪程式應用方案設計比賽 | 廉政公署、CPTTM | 未公布 | 已截止 | [C262] [CLIST] |
+| 2026 青少年科普影片製作比賽 | 科學館、CPTTM 等 | 未公布 | 已截止 | [C261] [CLIST] |
+| 第七屆澳門職業英語比賽 | CPTTM、教青局（學生組） | 未公布（**不是**全澳英語演講大賽） | — | [C245] |
+| 澳門學生時裝技術／時裝繪畫技術／商品展示技術／美容技術比賽 | 見 [MCCI] | 未公布 | 已截止 | [C254] [C253] [C257] [C258] [CLIST] |
+
+### 11.3 CPTTM 獎項可以走的「申請評核」路
+
+| 大學 | 途徑 | 適合的獎項 | 保證？ | 來源 |
+| --- | --- | --- | --- | --- |
+| 澳大 | 未列名獎項：證明＋章程＋官方獲獎名單 | Python、MOS、網站、影片 | 不保證 | [UM] |
+| 理大 | 電腦學／人工智能專才 | 程式、網站、網絡類 | 不保證；作用是免筆試＋面試 | [MPUT] |
+| 理大 | 設計／視覺藝術／媒體藝術專才 | 多媒體、設計、ACP | 不保證；未點名 ACP | [MPUT] |
+| 旅大 | 特別才能（限筆試入學） | 校際或以上比賽獎項 | 不保證；無分值 | [UTM] |
+| 香港理大 | STARS | STEM、藝術 | 不保證；未點名 CPTTM | [STARS] |
+
+**履歷寫法：** 寫「CPTTM 某賽某獎」「已提交某專才申請」；未獲審批前，不寫「已獲大學加分」。
+
+---
+
+## 12. 「教育部白名單有沒有用？」<a id="q10"></a>
+<!-- card: 教育部白名單有沒有用？ | 47 項全國性競賽與升學的真實關係 -->
+
+**一句話答案：白名單本身不是加分清單。** 教育部明文規定，名單內比賽的結果**不得作為招生入學依據和高考加分項目**。真正對升學有用的，是名單中的**五大學科奧賽**，透過「保送」和「強基破格」兩條專門途徑。[MOEWL] [MOE]
+
+> 「竞赛以及竞赛产生的结果不得作为中小学招生入学的依据和高考加分项目，不得在高校招生中违规使用竞赛结果。」
+> 教育部辦公廳，教監管廳函〔2025〕7號，2025-10-22 [MOEWL]
+
+### 12.1 白名單是甚麼
+
+| 項目 | 官方內容 | 來源 |
+| --- | --- | --- |
+| 正式名稱 | 2025—2028 學年面向中小學生的全國性競賽活動名單 | [MOEWL] |
+| 依據 | 《面向中小學生的全國性競賽活動管理辦法》（教監管廳函〔2022〕4號） | [MOEWL] |
+| 數量 | **47 項**：自然科學素養類 22、人文綜合素養類 12、藝術體育類 13 | [MOEWLDOC] |
+| 舉辦期 | 原則上 2025-10 至 2028-08；每學年不超過 1 次，累計不超過 3 次 | [MOEWL] |
+| 目的 | 規範競賽管理、確保公益屬性；**是監管名單，不是升學名單** | [MOEWL] |
+
+### 12.2 白名單和升學的關係
+
+```mermaid
+flowchart TD
+    W["教育部白名單<br/>47 項全國性競賽"] --> X["比賽結果本身<br/>不得作招生入學依據<br/>不得作高考加分"]
+    W --> O["其中：五大學科奧賽<br/>數學、物理、化學、生物學、信息學"]
+    W --> R["其他 42 項<br/>AI、機器人、科創、作文、藝術等"]
+    O --> G1["國家集訓隊成員<br/>→ 保送資格（對應基礎學科）"]
+    O --> G2["全國決賽金／銀牌<br/>→ 強基計劃破格入圍<br/>（仍須參加高考）"]
+    O --> G3["清華澳門保送<br/>→ 奧賽突出可放寬排名"]
+    R --> N["沒有固定升學作用<br/>可作推薦／綜合素質材料"]
+    G1 -.-> M1["澳門代表隊身分<br/>不等同國家集訓隊"]
+    G2 -.-> M2["澳門學生一般不考高考<br/>通常不適用"]
+```
+
+| 途徑 | 條件 | 對澳門學生 | 來源 |
+| --- | --- | --- | --- |
+| 高考加分 | **不可以** | 不適用 | [MOEWL] [CANCEL] |
+| 保送生 | 學科奧賽**國家集訓隊**成員；奧賽保送原則上錄取至對應基礎學科專業；必須經高校考核 | 澳門代表隊**不等同**國家集訓隊 | [MOE] [PKUO] |
+| 強基計劃破格（例：復旦 2026） | 數、物、化、生、信息學奧賽**全國決賽金牌或銀牌** | **必須參加統一高考**，一般不適用 | [FDUQJ] |
+| 澳門保送生（清華） | 數、物、化、生、信息學奧賽表現突出，可放寬年級前三名要求 | **適用** | [THU] |
+| 其他白名單比賽 | 未見固定升學作用 | 可作推薦或綜合素質材料，不保證 | [MOEWL] |
+
+### 12.3 白名單 vs 澳門大學加分清單
+
+**兩份名單用途不同，只部分重疊。** 澳門四校看的是各自的招生條文，不是教育部白名單。[UM] [JAE]
+
+| 比賽 | 在 2025–2028 白名單？ | 澳大 2027/2028 加分清單？ | 來源 |
+| --- | --- | --- | --- |
+| 全國青少年科技創新大賽 | 是：第 14 項 | 是：2.1(c) | [MOEWLDOC] [UM] |
+| 全國中學生數學奧林匹克競賽 | 是：第 9 項 | 未列名，可申請評核 | [MOEWLDOC] [UM] |
+| 全國中學生信息學奧林匹克競賽 | 是：第 13 項 | 未列名，可申請評核 | [MOEWLDOC] [UM] |
+| 全國中小學信息技術創新與實踐活動（NOC）澳門區選拔賽 | **否：不在名單** | 是：2.1(a) 高中組冠亞季軍 | [MOEWLDOC] [UM] |
+| 全國學生「學憲法講憲法」活動 | 否：不在名單 | 是：2.2(i) | [MOEWLDOC] [UM] |
+
+**提醒老師：** NOC 不在新白名單，不影響它在澳大加分清單上的地位。反過來說，比賽在白名單上，也**不代表**澳門四校會加分。
+
+### 12.4 名單中與 IT／STEM 科組最相關的比賽
+
+| 序號 | 比賽 | 主辦單位 | 學段 |
+| --- | --- | --- | --- |
+| 1 | 全國青少年人工智能創新挑戰賽 | 中國少年兒童發展服務中心 | 小學至高中、中職 |
+| 2 | 世界機器人大會青少年機器人設計與信息素養大賽 | 中國電子學會 | 小學至高中、中職 |
+| 3 | 全國青少年無人機大賽 | 中國航空學會 | 小學至高中、中職 |
+| 9–13 | 全國中學生**數學／物理／化學／生物學／信息學**奧林匹克競賽 | 中國數學會、中國物理學會、中國化學會、中國植物學會及中國動物學會、中國計算機學會 | 普通高中 |
+| 14 | 全國青少年科技創新大賽 | 中國科協 | 普通高中、中職 |
+| 15 | 全國青少年航天創新大賽 | 中國航天科技國際交流中心 | 小學至高中、中職 |
+| 16 | 丘成桐中學科學獎 | 清華大學 | 普通高中 |
+| 18 | 全國青少年人工智能大賽 | 中國福利會、中國婦女發展基金會 | 小學至高中、中職 |
+| 29 | 全國青少年勞動技能與智能設計大賽 | 中國自動化學會 | 小學至高中、中職 |
+| 45 | 全國青少年人工智能輔助生成數字藝術創作者大賽 | 文化和旅游部藝術發展中心 | 小學至高中、中職 |
+
+完整 47 項見教育部附件。[MOEWLDOC]
+
+### 12.5 老師可以這樣回答學生
+
+| 學生問 | 建議回答 |
+| --- | --- |
+| 「白名單比賽可以加分嗎？」 | 教育部規定不能作高考加分；澳門四校只看自己的招生條文。 |
+| 「那參加白名單比賽有甚麼用？」 | 五大學科奧賽有保送、強基、清華放寬排名等專門途徑；其他比賽可作推薦材料，但沒有固定分數。 |
+| 「NOC 不在白名單，還值得參加嗎？」 | 值得。澳大 2027/2028 加分清單仍列 NOC 澳門區選拔賽高中組冠亞季軍。 |
+
+---
+
+# 第三部分：實際操作
+
+## 13. 本校過去的比賽，對保送和推薦免試有沒有用？<a id="qpast"></a>
+<!-- card: 本校過去的比賽有沒有用？ | 逐項對照澳大、內地、香港的保送與推薦免試 -->
+
+**先說結論：** 本校程式語言班過去參加的 15 項比賽，**只有一項可能屬於大學點名的加分比賽**（教青局的信息技術創新與實踐比賽，而且只限高中組冠、亞、季軍）。其餘比賽沒有任何大學寫明「加幾分」，但全部可以當作**推薦和保送的佐證材料**，其中計算機類獎項可用來報**理大專才入學（免筆試）**。[UM] [UMPRA] [MPUT]
+
+**先分清四個詞：**
+
+| 詞語 | 意思 | 本表對應欄 |
+| --- | --- | --- |
+| 加分 | 參加四校聯考，筆試分數上加分 | 澳大加分 |
+| 推薦免試 | 由中學校長推薦，不用考四校聯考，改為面試 | 澳大校長推薦 |
+| 保送 | 澳門學生經教青局系統獲內地高校錄取，不用參加內地高考 | 內地保送（清華、北大、浙大、交大、復旦） |
+| 推免 | 內地正式用法是指**本科畢業生免試讀研究生**，不適用於高中生；高中生對應的是「澳門保送生」 | — |
+
+**表內用語：** 「**點名**」＝條文寫明比賽名稱。「**可評核**」＝條文容許提交，由大學審批，不保證。「**佐證**」＝可放進推薦或保送材料，沒有分值。「**未點名**」＝條文沒有提及。
+
+### 13.1 逐項對照表
+
+| 比賽 | 澳大加分 | 澳大校長推薦 | 理大專才 | 內地保送 | 香港 |
+| --- | --- | --- | --- | --- | --- |
+| **澳門中小學信息技術創新與實踐比賽**（智能對決、Python 編程）｜教青局主辦｜2526 | **可能屬點名比賽**：澳大條文 2.1(a) 點名「全國中小學信息技術創新與實踐活動澳門區選拔賽（NOC）」，**高中組冠、亞、季軍 +20–50**。獎狀名稱要與條文一致；初中組獎項不適用，名稱不同則改按未列名申請 | 佐證 | 可評核 | 佐證；簡章未點名 | 理大 STARS、科大 BAAS 可評核；未點名 |
+| **澳門信息學奧林匹克選拔賽**（MOIJ／MOIC／MOIS）｜澳門電腦學會｜2425、2526 | 未點名；可評核。章程內的「加分」是賽內計分，不是大學加分 | 佐證 | 可評核 | 清華：信息學**奧賽表現突出**可適當放寬年級前三名要求；簡章沒有說明地區選拔賽是否計算。北大：綜合素質突出可突破排名。其餘三校未列競賽作用 | 理大 STARS 舉例為**國際**信息學奧賽，MOI 未點名，可評核。科大奧賽獎學金只限 IOI、APIO 獎牌 |
+| **CCF CSP-J／S**｜中國計算機學會｜2425、2627 進行中 | 未點名；可評核 | 佐證 | 可評核 | 屬信息學競賽：清華、北大可作佐證，爭取放寬排名；簡章未點名 CSP。其餘三校未列競賽作用 | 可評核；未點名 |
+| **CCF NOIP**｜中國計算機學會｜2425 | 未點名；可評核 | 佐證 | 可評核 | 屬信息學競賽：清華、北大可作佐證，爭取放寬排名；簡章未點名 NOIP。其餘三校未列競賽作用 | 可評核；未點名 |
+| **CCF NOI 入選澳門隊**｜2425 | 未點名；可評核。**不能**套用體育「澳門區代表」加分 | 佐證 | 可評核 | 清華、北大可作佐證。內地「學科奧賽國家集訓隊保送」**不適用**：澳門代表隊不等同國家集訓隊 | 可評核。科大理學院只寫香港隊成員獲有利考慮，未寫澳門代表等同 |
+| **International Cyber Olympiad in AI 入選澳門隊**｜2526 | 未點名；可評核。不能套用體育代表加分 | 佐證 | 可評核 | 佐證；不屬五大學科奧賽 | 可評核；未點名 |
+| **全澳中學生資訊科技知識問答比賽**｜CPTTM、教青局｜2425、2526、2627 進行中 | 未點名；可評核。**不是**滙業盃 | 佐證 | 可評核 | 佐證；簡章未點名 | 可評核；未點名 |
+| **全澳學生手機網站技術技能比賽**｜CPTTM、教青局｜2425、2526、2627 進行中 | 未點名；可評核 | 佐證 | 可評核 | 佐證；簡章未點名 | 可評核；未點名 |
+| **澳門學生 Office 軟件技能比賽（MOS）**｜CPTTM、教青局｜2425、2526 | 未點名；可評核 | 佐證 | 可評核 | 佐證；簡章未點名 | 可評核；未點名 |
+| **港澳青少年網絡技能競賽**｜教青局、CPTTM、思科網絡學院等｜2425、2526 | 未點名；可評核 | 佐證 | 可評核 | 佐證；簡章未點名 | 可評核；未點名 |
+| **微信小程序全球創新挑戰賽（澳門區）**｜2425、2526 | 未點名；可評核 | 佐證 | 可評核 | 佐證；簡章未點名 | 可評核；未點名 |
+| **大灣區青少年人工智能及網絡安全挑戰賽**｜澳門司警局、香港警務處、教青局｜2425、2526 | 未點名；可評核 | 佐證 | 可評核 | 佐證；簡章未點名 | 可評核；未點名 |
+| **全澳資訊科技大賽–三維編程與動畫**｜澳門理工大學｜2324、2425 | 未點名；可評核。理大自己的加分計劃也沒有列這個比賽 | 佐證 | 可評核 | 佐證；簡章未點名 | 可評核；未點名 |
+| **FISO 未來智能學生奧林匹克**、**職業導向－網站技術比賽**｜2425、2526 | 未點名；可評核 | 佐證 | 可評核 | 佐證；簡章未點名 | 可評核；未點名 |
+| **全球青少年人工智能未來創新競賽（澳門中學生賽區）**｜2627 進行中 | 未點名；可評核 | 佐證 | 可評核 | 佐證；簡章未點名 | 可評核；未點名 |
+
+**各欄的官方依據：**
+
+| 欄 | 條文內容 | 來源 |
+| --- | --- | --- |
+| 澳大加分 | 點名比賽見第 3 節。未列名獎項可以申請，但**必須上載比賽章程及獲獎名單**，否則不獲處理；獲批可加 20–50 分 | [UM] |
+| 澳大校長推薦 | 推薦免試。高二成績全級首 10%；未達者如有**學術獎項／資格（學科範疇公開比賽）**，校長亦可推薦。錄取按成績、特別才能、面試等綜合考量，沒有逐獎分值 | [UMPRA] |
+| 理大專才 | 免筆試。電腦學課程：曾獲本地、國家或國際級別的**計算機類比賽成績優異獎項**；人工智能課程：計算機、人工智能類比賽優異獎項。可豁免入學筆試，憑面試提前錄取。條文沒有點名任何比賽 | [MPUT] |
+| 內地保送 | 清華、北大寫明特長可放寬排名；浙大、交大、復旦未列競賽作用。五校都沒有「某比賽＝加幾分」的對照表 | [THU] [PKU] [ZJU] [SJTU] [FDU] [BRIEF] |
+| 香港 | 理大 STARS（STEM）及科大 BAAS（創意與創新）接受提交比賽成就，由大學評核；城大國際招生頁沒有比賽條文 | [STARS] [USTBAAS] [CITYINT] |
+
+### 13.2 這些獎項怎樣用最有效
+
+| 目標 | 最有用的本校獎項 | 做法 | 來源 |
+| --- | --- | --- | --- |
+| 澳大聯考加分 | 信息技術創新與實踐比賽**高中組**冠、亞、季軍 | 核對獎狀名稱是否與條文 2.1(a) 一致；2027-01-18 至 29 申請 | [UM] [NOC] [ITINNO] |
+| 澳大聯考加分（其他獎項） | 區域或以上、有官方得獎名單的獎項，例如港澳青少年網絡技能競賽金獎、大灣區挑戰賽獎項 | 按未列名程序申請：獎狀＋比賽章程＋官方獲獎名單網址；不保證 | [UM] |
+| 澳大校長推薦免試 | 多項學科公開比賽獎項 | 成績未達首 10% 時作為「學術獎項」依據；要交主辦單位發出的獲獎證明 | [UMPRA] |
+| 理大電腦學／人工智能免筆試 | 全部計算機類獎項，尤其 MOI、CSP、NOIP、網絡技能競賽 | 報「專才入學」；上一屆報名期為 12 月上旬 | [MPUT] |
+| 清華、北大保送 | MOI、CSP、NOIP、NOI 澳門隊 | 放進保送申請材料，爭取放寬排名門檻；仍要通過筆試和面試 | [THU] [PKU] |
+| 香港理大、科大 | 區域及國際層面的獎項 | STARS 最多填 3 項；BAAS 每個範疇最多填 3 項；要官方證明 | [STARS] [USTBAAS] |
+| 旅大（筆試入學） | 任何校際或以上比賽獎項 | 條文寫「有機會獲得優先錄取」，沒有分值 | [UTM] |
+| 科大（澳門） | — | 加分計劃只有滙業盃，上列比賽都不適用 | [MUST] |
+
+**提醒：** 履歷和推薦信照實寫「某賽某獎」。未獲大學審批前，不要寫「已獲加分」或「已獲保送資格」。
+
+**資料來源：** 本校比賽紀錄取自 `程式語言_成績.csv`（2324 至 2526 學年）及 `2526_競賽成績_202609091407.csv`；2627 學年為進行中的賽事。本表只列比賽，不列學生姓名。
+
+---
+
+## 14. 核對清單與近期日期<a id="ops"></a>
+<!-- card: 核對清單與日期 | 2026-10 至 2027-03 關鍵日期 -->
+
+| 要核對 | 標準 |
+| --- | --- |
+| 比賽名稱 | 與招生條文**一字不差**；改名或名稱相似都不能自行當同一賽事 |
+| 學生資格 | 個人／團體、高中組、名次、獲獎年期、居民身分、招生途徑全部符合 |
+| 優惠種類 | 加分、免考、免筆試、優先、獎學金分開記 |
+| 年度 | 上一屆條文不等於下一屆承諾 |
+| 證明文件 | 獎狀、成員證明、**比賽章程、官方得獎名單網址**、日期、組別 |
+
+| 日期 | 事項 | 來源 |
+| --- | --- | --- |
+| 2026-09-23 至 10-07 | 理大 2027/2028 中學校長推薦入學報名 | [MPUPRA] |
+| **2026-09-23 至 10-09** | **澳大 2027/2028 校長推薦入學報名（包括傑出運動員入學計劃）** | [UMPRA] |
+| 2026-10-05 至 16 | 科大 2027/2028 校長推薦（澳門學生）報名 | [MUSTPRA] |
+| 2026-11-14 至 15 | 澳大校長推薦面試（面試資格 11-09 至 15 公布） | [UMPRA] |
+| 2026-11-15 | 香港城大國際招生提前批截止 | [CITYINT] |
+| 2026-11-25 | 香港科大 BAAS（非 JUPAS）優先批次截止 | [USTBAAS] |
+| 2026 年 12 月中旬 | 澳大校長推薦公布面試結果 | [UMPRA] |
+| 2026-11-30 22:00 | 通訊博物館 2027 電子裝置製作比賽報名截止 | [CMM27] |
+| 2026-12-09 至 2027-01-13 | 澳大免考申請 | [UME] |
+| 2027-01-06 至 20 | 澳大入學考試（四校聯考）網上報名 | [UME] |
+| 2027-01-16 | 通訊博物館比賽高中組比賽日 | [CMM27] |
+| 2027-01-15 | 香港城大國際招生主要批次截止 | [CITYINT] |
+| **2027-01-18 至 29** | **澳大 2027/2028 加分計劃申請** | [UM] |
+| 2027-01-30 | 香港城大 OAES（非本地運動員）申請截止 | [CITYS] |
+| 2027-03-18 至 21 | 澳大筆試：葡文 3/18–19；中文、物理 3/20；英文、數學 3/21 | [UME] |
+| 未公布 | 理大、旅大 2027/2028 加分及報名日期 | [MPU] [UTM] |
+
+---
+
+## 15. 附錄：條文細表<a id="appendix"></a>
+<!-- card: 附錄：條文細表 | 音樂、全人發展、醫學英文免考、理大專才、證書界線 -->
+
+以下細表由舊版《升學加分總表（合併版）》併入，內容沿用該版 2026-10-07 的核實結果。舊版其餘內容已全部包含在前面各節。
+
+### 15.1 澳大加分：音樂（只限樂器）
+
+| 條文 | 證書／資格 | 要求 | 獲獎時間 |
+| --- | --- | --- | --- |
+| 2.4(a) | 英國皇家音樂學院（ABRSM）考試 | 第五級或以上；pass／merit／distinction | 無限制 |
+| 2.4(b) | 英國倫敦音樂學院（LCM）考試 | 第五級或以上；pass／merit／distinction | 無限制 |
+| 2.4(c) | 中國中央音樂學院音樂水平等級術科考試 | 第六級或以上 | 無限制 |
+| 2.4(d) | 國際性／地區性音樂表演或比賽 | **參加證明**（不限於得獎） | 高中最後三年內 |
+| 2.4(e) | 澳門文化局、澳門管弦協會或其他官方團體舉辦的國際性／地區性音樂表演或比賽 | **參加證明** | 高中最後三年內 |
+
+來源：[UM]
+
+### 15.2 澳大加分：全人發展
+
+| 條文 | 資格 | 要求 | 獲獎時間 |
+| --- | --- | --- | --- |
+| 2.5(a) | 澳大夏令營 | 曾參加 | 高中最後三年內 |
+| 2.5(b) | 澳大葡語暑期課程 | 曾參加 | 高中最後三年內 |
+| 2.5(c) | 澳門青年義工獎勵計劃 | 白金／金／銀／銅獎 | 高中最後三年內 |
+| 2.5(d) | 北京舞蹈學院中國舞等級考試 | 第七級或以上 | 無限制 |
+| 2.5(e) | 英國皇家舞蹈學院（RAD）考試 | 第五級或以上 | 無限制 |
+| 2.5(f) | 澳洲聯邦舞蹈教師協會（CSTD）考試 | 第六級或以上 | 無限制 |
+| 2.5(g) | 其他才能或傑出貢獻：學生社團幹部、學生會成員、澳門少年合唱團、管弦樂團、中樂團成員等 | 提供證明；須評核 | 高中最後三年內 |
+
+來源：[UM]
+
+### 15.3 科大醫學課程（內外全科醫學學士）英文免考
+
+| 資格 | 門檻 |
+| --- | --- |
+| IELTS 學術模式 | 總分 6.5 或以上（兩年內有效） |
+| TOEFL iBT | 93 或以上，或新制 4.5 或以上（兩年內有效） |
+| IB | 高級程度英語 B 4 分；標準程度英語 B 5 分；英語 A 各類 4 分等（詳見原文） |
+| GCSE／GCEO／IGCSE | GCSE／GCEO 英語 5 分（C 級）；IGCSE 第一語言 5 分（C 級）；IGCSE 第二語言 6 分（B 級） |
+| 劍橋 CPE／CAE | CPE 總分 180 或 C1 級；CAE 總分 180 或 C 級 |
+| SAT | 舊制：批判性閱讀＋寫作合共 550；新制：寫作和語文 31、閱讀 30 |
+
+來源：[MUST] 附件 1 第 I 部分。
+
+### 15.4 理大專才入學：各課程接受的資格
+
+適用澳門本地居民。上一屆報名 2025-12-01 至 11，面試 2026 年 1 月上旬起。官方沒有列出封閉的比賽名單。來源：[MPUT]
+
+| 課程 | 獎項／資格 |
+| --- | --- |
+| 電腦學 | 本地、國家或國際級別的**計算機類**比賽成績優異獎項 |
+| 人工智能 | 本地、國家或國際**計算機／人工智能類**比賽優異獎項 |
+| 體育教育 | 現役澳門運動代表隊隊員／澳門學界代表 |
+| 中葡／葡中翻譯 | 葡語／英語寫作、朗誦、辯論等優異獎項；或 CAPLE、Celpe-Bras 等葡語證書 |
+| 中英翻譯 | 英語寫作、朗誦、辯論等優異獎項 |
+| 國際漢語教育（漢語母語者） | 中文／英語寫作、朗誦、辯論等優異獎項；或於本地／外地媒體發表中文文章 |
+| 葡萄牙語 | 葡語／英語比賽優異獎項；或 CAPLE、Celpe-Bras 等證書 |
+| 設計 | 設計短期課程、作品展出證明；或**最近三年**重要設計比賽獎項 |
+| 音樂 | 本地、國家或國際重要音樂比賽獎項 |
+| 視覺藝術 | 本地、國家或國際重要藝術比賽獎項 |
+| 媒體藝術 | 相關國際認可證書、展出證明；或重要媒體藝術比賽獎項 |
+
+官方**沒有指定**媒體藝術證書的品牌或等級，亦沒有點名 ACP、MOS、IOI、MOI。博彩與娛樂管理另有工作經驗條件，不屬學生競賽範圍。
+
+### 15.5 用四校聯考成績報內地高校
+
+這是另一條路，**不會把澳大批准的加分帶過去**。五校中 2026 年有復旦、浙大參加。[GOVJAE]
+
+| 大學 | 2026 條文 | 競賽作用 | 來源 |
+| --- | --- | --- | --- |
+| 復旦 | 語文、數學、外語各科 950 或以上等 | 未公布逐獎加分 | [FDUJAE] |
+| 浙大 | 語文、數學、外語各科 950 或以上等；綜合評價 | 可交獲獎材料供評價，無固定加分 | [ZJUJAE] |
+
+950 是招生公告採用的聯考成績口徑，不是校內百分制分數。
+
+### 15.6 證書的界線
+
+| 證書／資格 | 界線 |
+| --- | --- |
+| MOS | 認證考試與 Office 比賽獎項是兩份證據；未查得任何「持 MOS 加 X 分」條文 |
+| ACP | 2026 多媒體章程寫明通過認證者可獲 Certiport ACP 電子證書；理大媒體藝術接受「相關國際認可證書」但**沒有點名 ACP** [C249] |
+| 思科 | 競賽條款列 CCNA 等學習內容，**不等於**參賽即取得 CCNA 認證 [C252] |
+| 技能競賽 | 不能把「技能」當「體育」套用體育加分；不能因「世界級」就推定有加分 |
+| Python | 有明確加分條款的是**香港理大 2024 年**的指定 Python 比賽（見[第 4 節](#q3)），**不是** CPTTM 的 Python 比賽 |
+
+**填履歷寫法：** 可寫「CPTTM 某賽事某獎」「已提交某專才計劃申請」；未收到大學審批前，不寫「已獲大學加分」。
+
+### 15.7 為每名學生保存的文件
+
+獎狀、個人／團體成員證明、**比賽章程、官方得獎名單網址**、獲獎日期、組別、證書等級、當年招生條文。參賽證明與得獎證明分開；澳大音樂類等可用「參加證明」的項目另行標註。
+
+---
+
+## 16. 引用資料總表<a id="refs"></a>
+
+「✔ 2026-10-07 三核」＝本版再次打開原文核對；其餘沿用 2026-10-06 核實。
+
+| 代號 | 文件 | 核對 |
+| --- | --- | --- |
+| [UM] | 澳門大學 2027/2028 入學考試加分計劃 | ✔ 2026-10-07 三核 |
+| [UME] | 澳門大學入學考試及免考 | ✔ 2026-10-07 三核 |
+| [UMPRA] | 澳門大學 2027/2028 校長推薦入學規條 | ✔ 2026-10-07 三核 |
+| [UMSPORT] | 澳門大學體育事務部獎學金計劃頁：2027/2028 校長推薦傑出運動員入學計劃章程 | ✔ 2026-10-07 |
+| [JAE] | 四校聯考簡介 | 2026-10-06 |
+| [MPU] | 澳門理工大學入學考試、加分及免考 | ✔ 2026-10-07 三核 |
+| [MPUF] | 澳門理工大學加分申請表 | 2026-10-06 |
+| [MPUT] | 澳門理工大學專才入學 | ✔ 2026-10-07 三核 |
+| [MPUPRA] | 澳門理工大學中學校長推薦入學（2027/2028） | ✔ 2026-10-07 |
+| [MPUO] | 澳門理工大學傑出國際運動員獎學金 | 2026-10-06 |
+| [MUST] | 澳門科技大學招生規章附件 1（2026-06-17） | ✔ 2026-10-07 三核（PDF 原文） |
+| [MUSTT] | 澳門科技大學 2026/2027 特長生簡章（2026 年 1 月） | ✔ 2026-10-07 |
+| [MUSTPRA] | 澳門科技大學 2027/2028 校長推薦 | ✔ 2026-10-07 三核 |
+| [UTM] | 澳門旅遊大學本地生學士招生頁 | ✔ 2026-10-07 三核 |
+| [UTMOLD] | 舊版旅遊學院 FAQ（歷史資料） | 2026-10-06 |
+| [NOC] | 教青局 2022/2023 NOC 成績公告 | 2026-10-06 |
+| [ITINNO] | 教青局 2024/2025 信息學創新比賽文件 | 2026-10-06 |
+| [CMM] [CMM27] | 通訊博物館電子裝置製作比賽 2026／2027 章程 | 2026-10-06 |
+| [LAW] | 憲法和基本法演講比賽合辦公告 | 2026-10-06 |
+| [DIP] | 澳門青少年外交知識競賽公告 | 2026-10-06 |
+| [BOC] | 中銀科創菁英挑戰賽公告 | 2026-10-06 |
+| [ESC] | 全澳英語演講大賽公告 | 2026-10-06 |
+| [DELTA] | 第 31 屆滙業盃公告 | 2026-10-06 |
+| [MOI] | 澳門電腦學會 MOI 2025 章程 | 2026-10-06（本次 403 無法開啟） |
+| [CLIST] | CPTTM 比賽目錄 | ✔ 2026-10-07 三核 |
+| [C245] [C247] [C249] [C252] [C253] [C254] [C257] [C258] [C261] [C262] [C264] [C265] | CPTTM 各比賽章程 | 2026-10-06／10-07 |
+| [CMOS] | CPTTM Office 軟件技能比賽 | 2026-10-06 |
+| [CCAC] | 廉政公署反貪程式比賽公告 | 2026-10-06 |
+| [MCCI] | 文化創意產業平台時尚競技公告 | 2026-10-06 |
+| [STARS] | 香港理工大學 STARS | ✔ 2026-10-07 三核 |
+| [USTO] | 香港科技大學奧賽獎學金 | ✔ 2026-10-07 三核 |
+| [USTFAQ] | 香港科大理學院 FAQ | 2026-10-06 |
+| [CUHKE] [CUHKN] | 中大經濟學本地 Non-JUPAS／非本地頁 | ✔ 2026-10-07 三核 |
+| [CUHKS] | 中大入學獎學金（含體育獎學金） | ✔ 2026-10-07 |
+| [HKUG] [HKUGUIDE] [HKUS] [HKUS26] | 港大內地招生及運動員計劃 | 2026-10-06；[HKUS] ✔ 2026-10-07 |
+| [CITYINT] | 香港城市大學 International Admissions（學歷、英語要求、日期） | ✔ 2026-10-07 |
+| [CITYSCH] | 香港城市大學國際生入學獎學金 | ✔ 2026-10-07 |
+| [CITYS] [CITYSAAS] [CITYSALSA] | 城大運動員入學：OAES、SAAS、SALSA | ✔ 2026-10-07 |
+| [USTSAAS] [USTBAAS] | 香港科大 SAAS／Beyond Academic Admissions Scholarship | ✔ 2026-10-07 |
+| [POLYOSRS] | 香港理大 Outstanding Sportsmen Recommendation Scheme | ✔ 2026-10-07 |
+| [BUTADAS] [BUDAS] | 浸大 TADAS 資格頁／Direct Admission Schemes（SETDAS） | ✔ 2026-10-07 |
+| [EDUSALSA] | 教大 SALSA 頁 | ✔ 2026-10-07 |
+| [LNEA] | 嶺大 Elite Athletes 頁 | 本次未能開啟（網站防護） |
+| [EDUS] [EDUN] | 教大自薦／非本地 FAQ | 2026-10-06；[EDUS] ✔ 2026-10-07 |
+| [PYHK] [META] [METAB] [PUSCI] [PUYM] | 香港理大自辦活動 | 2026-10-06 |
+| [SF24] [SF25] [SF26] | 香港科大 Science Focus | 2026-10-06 |
+| [RANK] | 2026 軟科中國大學排名 | 2026-10-06 |
+| [BRIEF] | 教青局內地高校招收澳門保送生入口 | 2026-10-06 |
+| [THU] [PKU] [ZJU] [SJTU] [FDU] | 五校 2026 澳門保送生簡章 | ✔ 2026-10-07 三核（PDF 原文） |
+| [GOVJAE] [FDUJAE] [ZJUJAE] | 四校聯考成績報內地高校 | 2026-10-06 |
+| [JOINT] | 2026 港澳台僑聯招簡章 | 2026-10-06 |
+| [CANCEL] | 教育部取消高考加分 | 2026-10-06 |
+| [MOE] | 教育部 2026 年高校部分特殊類型招生答記者問 | ✔ 2026-10-07 三核 |
+| [MOEWL] | 教育部辦公廳：2025—2028 學年面向中小學生的全國性競賽活動通知（教監管廳函〔2025〕7號） | ✔ 2026-10-07 |
+| [MOEWLDOC] | 同上通知附件：47 項競賽名單（.doc） | ✔ 2026-10-07 |
+| [PKUO] | 北大 2026 學科競賽保送 | 2026-10-06 |
+| [FDUQJ] | 復旦 2026 強基計劃 | ✔ 2026-10-07 三核 |
+
+[UM]: https://reg.um.edu.mo/admissions/macao-students/admission-examination/rules/bonus-scheme/?lang=zh-hant
+[UME]: https://reg.um.edu.mo/admissions/macao-students/admission-examination/?lang=zh-hant
+[UMPRA]: https://reg.um.edu.mo/download/admission-local/PRA-info-sheet/PRA-rules-chn-wp.pdf
+[UMSPORT]: https://sports.osa.um.edu.mo/scholarshipscheme/?lang=zh-hant
+[JAE]: https://reg.um.edu.mo/admissions/macao-students/admission-examination/jae/introduction/?lang=zh-hant
+[MPU]: https://mpusite.mpu.edu.mo/admission_local/zh/admission_exams.php
+[MPUF]: https://admweb.mpu.edu.mo/doc/admdoc/Form_Bonus%20Points%20Scheme_Chn.pdf
+[MPUT]: https://mpusite.mpu.edu.mo/admission_local/zh/local_talents_professionals.php
+[MPUO]: https://www.mpu.edu.mo/en/students/scholarships_fellowships/int_sport_scholarship_plan
+[MPUPRA]: https://mpusite.mpu.edu.mo/admission_local/zh/principals_recommendation.php
+[MUST]: https://www.must.edu.mo/images/Admission/files/CHI_admission_regulations_att1.pdf
+[MUSTT]: https://www.must.edu.mo/images/Admission/files/2026-2027%E5%AD%B8%E5%B9%B4%E7%89%B9%E9%95%B7%E7%94%9F%E6%8B%9B%E7%94%9F%E7%B0%A1%E7%AB%A0_%E7%B9%81.pdf
+[MUSTPRA]: https://ugadmissions.must.edu.mo/page/id-1299.html
+[UTM]: https://www.utm.edu.mo/admission/tc/undergraduate_programmes/local-applicant/daytime-degree-programmes/index.html
+[UTMOLD]: https://www.utm.edu.mo/Content/Uploads/Admission/FAQ_Chi.pdf
+[NOC]: https://portal.dsedj.gov.mo/webdsejspace/addon/jv/msgfunc/Msg_funclink_page.jsp?langsel=C&msg_id=97242
+[ITINNO]: https://portal.dsedj.gov.mo/webdsejspace/site/ce/regul/2425/2425_Macau_IT_Innovation.pdf
+[CMM]: https://www.cmm.gov.mo/chi/activities/2026/ecompetition/regulation.html
+[CMM27]: https://www.cmm.gov.mo/chi/activities/2027/ecompetition/regulation.html
+[LAW]: https://www.gov.mo/zh-hant/news/1244529/?noredirect=zh_hant
+[DIP]: https://www.gov.mo/zh-hant/news/1197472/
+[BOC]: https://www.um.edu.mo/zh-hant/news-and-press-releases/press-release/detail/55948/
+[ESC]: https://www.gov.mo/zh-hant/news/1170527/?noredirect=zh_hant
+[DELTA]: https://www.delta-asia.com.mo/%E7%AC%AC%E4%B8%89%E5%8D%81%E4%B8%80%E5%B1%86%E3%80%8C%E6%BB%99%E6%A5%AD%E7%9B%83%E3%80%8D%E6%97%A5%E5%89%8D%E5%9C%93%E6%BB%BF%E8%88%89%E8%A1%8C%E3%80%80%E9%87%8D%E6%BA%AB%E8%B3%BD%E4%BA%8B%E7%B2%BE/
+[MOI]: https://www.mcs.mo/articles/76
+[CLIST]: https://events.cpttm.org.mo/competitions?l=c
+[C245]: https://events.cpttm.org.mo/competition/245?l=c
+[C247]: https://events.cpttm.org.mo/competition/247?l=c
+[C249]: https://events.cpttm.org.mo/competition/249?l=c
+[C252]: https://events.cpttm.org.mo/competition/252?l=c
+[C253]: https://events.cpttm.org.mo/competition/253?l=c
+[C254]: https://events.cpttm.org.mo/competition/254?l=c
+[C257]: https://events.cpttm.org.mo/competition/257?l=c
+[C258]: https://events.cpttm.org.mo/competition/258?l=c
+[C261]: https://events.cpttm.org.mo/competition/261?l=c
+[C262]: https://events.cpttm.org.mo/competition/262?l=c
+[C264]: https://events.cpttm.org.mo/competition/264?l=c
+[C265]: https://events.cpttm.org.mo/competition/265?l=c
+[CMOS]: https://www.cpttm.org.mo/categories/smta/page/2/
+[CCAC]: https://www.gov.mo/zh-hant/news/1264986/
+[MCCI]: https://www.macaucci.gov.mo/cn/detail/489
+[STARS]: https://www.polyu.edu.hk/study/ug/admissions/special-talents-admission-and-recognition-scheme
+[PYHK]: https://www.polyu.edu.hk/comp/news-and-events/comp-50th-anniversary/senior-secondary-python-programming-contest/
+[META]: https://metaverse.comp.polyu.edu.hk/about-the-programme
+[METAB]: https://metaverse.comp.polyu.edu.hk/about-the-programme/bonus-points-for-undergraduate-admission
+[PUSCI]: https://www.polyu.edu.hk/fs/news-and-events/polyu-science-young-talents-competition/
+[PUYM]: https://www.polyu.edu.hk/fcms/news-and-events/competition/
+[USTO]: https://join.hkust.edu.hk/scholarship-scheme-for-international/asian-olympiad-medalists
+[USTFAQ]: https://science.hkust.edu.hk/academic_programs/undergrad_prog/faq
+[SF24]: https://sciencefocus.hkust.edu.hk/science-in-lyrics-writing-competition-2024
+[SF25]: https://sciencefocus.hkust.edu.hk/writing-competition-2025
+[SF26]: https://sciencefocus.hkust.edu.hk/node/279
+[CUHKE]: https://admission.econ.cuhk.edu.hk/ug/bssc-economics/admission/non-jupas-local-year-1/
+[CUHKN]: https://admission.econ.cuhk.edu.hk/ug/bssc-economics/admission/non-local-macau-taiwan-international/
+[CUHKS]: https://admission.cuhk.edu.hk/fees-financing-your-studies/scholarships/admission-scholarships-for-undergraduates-only/
+[HKUG]: https://admissions.hku.hk/zh-hans/apply/mainland
+[HKUGUIDE]: https://admissions.hku.hk/sites/default/files/2025-11/2026Application%20guide%20Gaokao.pdf
+[HKUS]: https://lead.hku.hk/en/article/2022/01/hku-launches-top-athletes-direct-admission-scheme-to-admit-top-athletes-based-mainly-on-sports-achievements/
+[HKUS26]: https://lead.hku.hk/en/article/2026/07/hku-admits-four-outstanding-student-athletes-via-top-athletes-direct-admission-scheme-202627/
+[CITYINT]: https://www.cityu.edu.hk/admo/admissions/international-admissions
+[CITYSCH]: https://www.cityu.edu.hk/admo/entrance-scholarship-international-students
+[USTSAAS]: https://join.hkust.edu.hk/saas
+[USTBAAS]: https://join.hkust.edu.hk/baas
+[POLYOSRS]: https://www.polyu.edu.hk/sao/counselling-and-wellness-section/sports-development/sports-team/outstanding-sportsmen-recommendation-scheme/
+[BUTADAS]: https://tadas.hkbu.edu.hk/en/admission-and-application/eligibility-selection-criteria.html
+[BUDAS]: https://admissions.hkbu.edu.hk/admissions/direct-admission-schemes.html
+[EDUSALSA]: https://www.apply.eduhk.hk/ug/salsa
+[LNEA]: https://www.ln.edu.hk/admissions/ug/apply-now/elite-athletes
+[CITYS]: https://www.cityu.edu.hk/en/sds/physical-education-wellness-and-sports/student-athletes-admission/outstanding-athletes-entrance
+[CITYSAAS]: https://www.cityu.edu.hk/en/sds/physical-education-wellness-and-sports/student-athletes-admission/saas
+[CITYSALSA]: https://www.cityu.edu.hk/en/sds/physical-education-wellness-and-sports/student-athletes-admission/salsa
+[EDUS]: https://www.apply.eduhk.hk/ug/selfnom
+[EDUN]: https://www.apply.eduhk.hk/ug/faq_nonlocal
+[RANK]: https://www.shanghairanking.cn/rankings/bcur/202610
+[BRIEF]: https://appl2.dsedj.gov.mo/ChinaUEnrollment/UPublic/EnrollmentBrief.jsp
+[THU]: https://appl2.dsedj.gov.mo/ChinaUEnrollment/UPublic/DownloadUniDoc.jsp?fileName=%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6.pdf&u_id=110040
+[PKU]: https://appl2.dsedj.gov.mo/ChinaUEnrollment/UPublic/DownloadUniDoc.jsp?fileName=%E5%8C%97%E4%BA%AC%E5%A4%A7%E5%AD%A6.pdf&u_id=110001
+[ZJU]: https://appl2.dsedj.gov.mo/ChinaUEnrollment/UPublic/DownloadUniDoc.jsp?fileName=%E6%B5%99%E6%B1%9F%E5%A4%A7%E5%AD%A6.pdf&u_id=110139
+[SJTU]: https://appl2.dsedj.gov.mo/ChinaUEnrollment/UPublic/DownloadUniDoc.jsp?fileName=%E4%B8%8A%E6%B5%B7%E4%BA%A4%E9%80%9A%E5%A4%A7%E5%AD%A6.pdf&u_id=110052
+[FDU]: https://appl2.dsedj.gov.mo/ChinaUEnrollment/UPublic/DownloadUniDoc.jsp?fileName=%E5%A4%8D%E6%97%A6%E5%A4%A7%E5%AD%A6.pdf&u_id=110065
+[GOVJAE]: https://www.gov.mo/zh-hant/news/1234635/
+[FDUJAE]: https://ao.fudan.edu.cn/e1/60/c36330a778592/page.htm
+[ZJUJAE]: https://zdzsc.zju.edu.cn/2026/0602/c87242a3168945/page.htm
+[JOINT]: https://www.gatzs.com.cn/gatzs/pz/hongkong/202601/20260120/2293447012.html
+[CANCEL]: https://hudong.moe.gov.cn/moe_879/moe_191/s4559/201412/t20141217_181754.html
+[MOE]: http://www.moe.gov.cn/jyb_xwfb/s271/202511/t20251103_1418853.html
+[MOEWL]: http://www.moe.gov.cn/srcsite/A29/202510/t20251029_1418393.html
+[MOEWLDOC]: http://www.moe.gov.cn/srcsite/A29/202510/W020251029471803160286.doc
+[PKUO]: https://bkzs.pku.edu.cn/tzgg/7cb048dd07d6453b903a3739b28eee14.htm
+[FDUQJ]: https://news.fudan.edu.cn/2026/0409/c45a148600/page.htm
+</script>
+<script src="./marked.umd_202610071530.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.min.js"></script>
+<script>
+(function(){
+  var src=document.getElementById('md').textContent;
+  var doc=document.getElementById('doc');
+  if(!window.marked){doc.innerHTML='<pre>'+src.replace(/[&<]/g,function(c){return c==='&'?'&amp;':'&lt;'})+'</pre>';return;}
+  doc.innerHTML=marked.parse(src,{gfm:true});
+  // part headings (h1 inside doc after the first)
+  doc.querySelectorAll('h1').forEach(function(h,i){if(i>0){var d=document.createElement('h2');d.className='part';d.textContent=h.textContent;h.replaceWith(d);}});
+  // anchors: move <a id> inside headings to heading id
+  doc.querySelectorAll('h2 a[id]').forEach(function(a){a.parentElement.id=a.id;a.remove();});
+  // wrap tables
+  doc.querySelectorAll('table').forEach(function(t){var w=document.createElement('div');w.className='tbl';t.parentNode.insertBefore(w,t);w.appendChild(t);
+    var heads=[].map.call(t.querySelectorAll('thead th'),function(h){return h.textContent.trim();});
+    t.querySelectorAll('tbody tr').forEach(function(r){[].forEach.call(r.children,function(c,i){if(heads[i])c.dataset.label=heads[i];if(!c.textContent.trim()){c.classList.add('blank');return;}var v=document.createElement('span');v.className='v';while(c.firstChild)v.appendChild(c.firstChild);c.appendChild(v);});});});
+  // status cells
+  doc.querySelectorAll('td').forEach(function(td){var t=td.textContent;
+    if(/未公布|不能套用|^否|不等同|已取消/.test(t))td.classList.add('na');
+    else if(/^有[：:]|^\*?\*?可以/.test(t))td.classList.add('yes');});
+  // citations
+  doc.querySelectorAll('a').forEach(function(a){if(/^[A-Z][A-Z0-9]{1,9}$/.test(a.textContent.trim())){a.classList.add('cite');a.target='_blank';a.rel='noopener';a.title=a.href;}});
+  // mermaid
+  var blocks=doc.querySelectorAll('pre code.language-mermaid');
+  var n=0;
+  blocks.forEach(function(c){var d=document.createElement('div');d.className='mmd';d.dataset.src=c.textContent;d.textContent=c.textContent;d.classList.add('src');c.parentElement.replaceWith(d);});
+  if(window.mermaid){
+    var dark=document.documentElement.dataset.theme==='dark'||(document.documentElement.dataset.theme!=='light'&&matchMedia('(prefers-color-scheme: dark)').matches);
+    mermaid.initialize({startOnLoad:false,theme:dark?'dark':'neutral',securityLevel:'loose',flowchart:{htmlLabels:true,curve:'basis'},fontFamily:'Noto Sans TC, PingFang TC, sans-serif'});
+    doc.querySelectorAll('.mmd').forEach(function(d){
+      mermaid.render('mmd'+(n++),d.dataset.src).then(function(r){d.innerHTML=r.svg;d.classList.remove('src');
+        var s=d.querySelector('svg'),w=s&&s.viewBox.baseVal.width;
+        if(w&&w*0.6>doc.clientWidth-34){d.classList.add('wide');s.style.setProperty('max-width','none','important');s.style.width=Math.round(w*0.8)+'px';}
+      }).catch(function(){});
+    });
+  }
+  // 手機：把每個 h2 連同其後內容包成可收合的一節。
+  if(matchMedia('(max-width:640px)').matches){
+    doc.classList.add('acc');var cur=null;
+    [].slice.call(doc.children).forEach(function(el){
+      if(el.tagName==='H2'){
+        if(el.classList.contains('part')){cur=null;return;}
+        cur=document.createElement('details');cur.className='sec';var s=document.createElement('summary');
+        doc.insertBefore(cur,el);s.appendChild(el);cur.appendChild(s);
+      }else if(cur&&el.tagName!=='HR'){cur.appendChild(el);}
+    });
+    // 每節末加「收起本節」，長內容讀完不用滑回標題。
+    doc.querySelectorAll('details.sec').forEach(function(d){var b=document.createElement('button');b.type='button';b.className='sec-close';b.textContent='↑ 收起本節';
+      b.addEventListener('click',function(){d.open=false;d.scrollIntoView({block:'start'});});d.appendChild(b);});
+  }
+  function go(id){var t=id&&document.getElementById(id);if(!t)return false;
+    var sec=t.closest('details.sec');if(sec)sec.open=true;
+    setTimeout(function(){t.scrollIntoView({block:'start'});},150);return true;}
+  document.addEventListener('click',function(e){var a=e.target.closest('a[href^="#"]');if(!a)return;
+    if(go(decodeURIComponent(a.getAttribute('href').slice(1))))e.preventDefault();});
+  if(location.hash)go(decodeURIComponent(location.hash.slice(1)));
+})();
+</script>
+
+<script>if(parent!==window)new ResizeObserver(()=>parent.postMessage({kind:'guide-height',height:document.querySelector(".wrap").getBoundingClientRect().height},location.origin)).observe(document.querySelector(".wrap"));</script>
