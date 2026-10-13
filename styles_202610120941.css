@@ -184,6 +184,20 @@ details[open]>summary>.chevron{transform:rotate(90deg)}
 .attendance-grid .room-heading:last-child{border-bottom:0}
 
 /* 提示 */
+/* 比賽日曆 */
+.cal-list{padding:4px 0}
+.cal-row{display:flex;align-items:center;gap:14px;padding:12px 22px;border-top:1px solid #ffffff12;font-size:14px}
+.cal-row:first-child{border-top:0}
+.cal-row p{overflow-wrap:anywhere}
+.cal-row .competition-title h3{font-size:15px;font-weight:600}
+.cal-when{flex:none;width:54px;text-align:center;color:var(--muted);font-variant-numeric:tabular-nums}
+.cal-row.is-soon .date-block{background:var(--gold-soft)}
+.cal-row.is-soon .date-block strong{color:var(--gold)}
+.pill.cal-gold{background:var(--gold-soft);color:var(--gold)}
+.pill.cal-est{margin-left:4px;vertical-align:middle}
+.cal-tabs{display:flex;flex-wrap:wrap;width:fit-content;max-width:100%}
+.cal-foot{margin-top:18px}
+@media(max-width:640px){.cal-row{padding:12px 16px}.cal-tabs button{padding:0 12px}}
 #to-top{position:fixed;right:16px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:9;min-height:44px;padding:0 14px;border-radius:999px;border:1px solid var(--line-strong);background:var(--surface);color:var(--ink);font-size:13px;box-shadow:0 4px 14px #0000004d}
 #toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%);z-index:10;max-width:calc(100% - 32px);padding:10px 18px;border-radius:10px;background:#e3eef1;color:#12303a;font-size:14px}
 
